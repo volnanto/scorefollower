@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>WormHandler</title>
+    <meta name="keywords" content="at.ofai.music.match.WormHandler,WormHandler class" />
+    <meta name="generator" content="SinjDoc 0.5" />
+    <link href="../../../../stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="Index" href="../../../../index-all.html" />
+    <link rel="Start" href="../../../../overview-summary.html" />
+    <link rel="Up" href="package-summary.html" />
+    <link rel="Help" href="../../../../help-doc.html" />
+  </head>
+  <body class="classPage bigframe">
+   <div class="navbar">
+    <p class="nav navtop">
+      <span class="over"><a href="../../../../overview-summary.html">Overview</a></span>
+      <span class="package"><a href="package-summary.html">Package</a></span>
+      <span class="class selected">Class</span>
+      <span class="use"><a href="class-use/WormHandler.html">Use</a></span>
+      <span class="tree"><a href="package-tree.html">Tree</a></span>
+      <span class="deprecated"><a href="../../../../deprecated-list.html">Deprecated</a></span>
+      <span class="index"><a href="../../../../index-all.html">Index</a></span>
+      <span class="help"><a href="../../../../help-doc.html">Help</a></span>
+    </p>
+    <p class="nav navmid">
+      <span class="prevnext">
+       <span class="prev">Prev Class</span>
+       <span class="next">Next Class</span>
+      </span>
+      <span class="framesel">
+       <span class="frames"><a href="../../../../index.html" target="_top">Frames</a></span>
+       <span class="noframes"><a href="WormHandler.html" target="_top">NoFrames</a></span>
+      </span>
+      <span class="allclasses"><a href="../../../../allclasses-noframe.html">All Classes</a></span>
+   </p>
+   <p class="nav navbot">
+      <span class="summary">Summary:
+       <span class="nested">Nested</span>
+       <span class="field"><a href="#field_summary">Field</a></span>
+       <span class="constr"><a href="#constructor_summary">Constr</a></span>
+       <span class="method"><a href="#method_summary">Method</a></span>
+      </span>
+      <span class="detail">Detail:
+       <span class="field"><a href="#field_detail">Field</a></span>
+       <span class="constr"><a href="#constructor_detail">Constr</a></span>
+       <span class="method"><a href="#method_detail">Method</a></span>
+      </span>
+   </p>
+    <div class="navtitle">
+     
+    </div>
+    <p class="clear"><!--empty--></p>
+   </div>
+   <p class="packageName">at.ofai.music.match</p>
+   <h1>  Class  WormHandler</h1>
+<!--
+   <p class="enclosing">
+   Enclosing class/interface: @OUTER@
+   </p>
+-->
+
+
+   <!-- XXX class hierarchy diagram goes here -->
+<!--
+   
+   <p class="directSubclasses">
+   Direct known subclasses: @ALL_SUBCLASSES@
+   </p>
+-->
+
+
+   <p class="declaration">
+     class 
+   <span class="className">WormHandler</span>
+   
+   
+      
+      <span class="extends">extends Object</span>
+      
+      
+   
+   </p>
+
+   <div class="description">
+   
+   </div>
+
+
+
+
+   <table class="field_summary summary">
+     <tr><th colspan="2"><a name="field_summary" id="field_summary">Field Summary</a></th></tr>
+
+     <tr><td> <a href="AudioFile.html" class="classRef">AudioFile</a></td><td><span class="memberName"><a href="#audioFile" class="fieldRef">audioFile</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double</td><td><span class="memberName"><a href="#energy" class="fieldRef">energy</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double[]</td><td><span class="memberName"><a href="#eventTime" class="fieldRef">eventTime</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> int[]</td><td><span class="memberName"><a href="#flag" class="fieldRef">flag</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> int</td><td><span class="memberName"><a href="#frameCount" class="fieldRef">frameCount</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double</td><td><span class="memberName"><a href="#framePeriod" class="fieldRef">framePeriod</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static double</td><td><span class="memberName"><a href="#frameTime" class="fieldRef">frameTime</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> int</td><td><span class="memberName"><a href="#hopCount" class="fieldRef">hopCount</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> int</td><td><span class="memberName"><a href="#hopsPerFrame" class="fieldRef">hopsPerFrame</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double[]</td><td><span class="memberName"><a href="#loudness" class="fieldRef">loudness</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double</td><td><span class="memberName"><a href="#maxTime" class="fieldRef">maxTime</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static int</td><td><span class="memberName"><a href="#MAX_LENGTH" class="fieldRef">MAX_LENGTH</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> int</td><td><span class="memberName"><a href="#nextIndex" class="fieldRef">nextIndex</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> int</td><td><span class="memberName"><a href="#nextRefIndex" class="fieldRef">nextRefIndex</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> WormParameters</td><td><span class="memberName"><a href="#param" class="fieldRef">param</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a></td><td><span class="memberName"><a href="#parent" class="fieldRef">parent</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> int</td><td><span class="memberName"><a href="#prevFrameCount" class="fieldRef">prevFrameCount</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double</td><td><span class="memberName"><a href="#prevMaxTime" class="fieldRef">prevMaxTime</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double</td><td><span class="memberName"><a href="#prevRefMaxTime" class="fieldRef">prevRefMaxTime</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static int</td><td><span class="memberName"><a href="#recalc" class="fieldRef">recalc</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a></td><td><span class="memberName"><a href="#reference" class="fieldRef">reference</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double[]</td><td><span class="memberName"><a href="#refEventTime" class="fieldRef">refEventTime</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> int[]</td><td><span class="memberName"><a href="#refFlag" class="fieldRef">refFlag</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double</td><td><span class="memberName"><a href="#refMaxTime" class="fieldRef">refMaxTime</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> String[]</td><td><span class="memberName"><a href="#refStrFlag" class="fieldRef">refStrFlag</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a></td><td><span class="memberName"><a href="#sm" class="fieldRef">sm</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> String[]</td><td><span class="memberName"><a href="#strFlag" class="fieldRef">strFlag</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double[]</td><td><span class="memberName"><a href="#tempo" class="fieldRef">tempo</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double</td><td><span class="memberName"><a href="#trackLevel" class="fieldRef">trackLevel</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> Worm</td><td><span class="memberName"><a href="#w" class="fieldRef">w</a></span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="constructor_summary summary">
+     <tr><th colspan="2"><a name="constructor_summary" id="constructor_summary">Constructor Summary</a></th></tr>
+
+     <tr><td> </td><td><span class="memberName"><a href="#WormHandler(at.ofai.music.match.PerformanceMatcher)" class="constructorRef">WormHandler</a>(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm)</span><div class="memberDescription"> Assumes live input against a reference worm file</div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="method_summary summary">
+     <tr><th colspan="2"><a name="method_summary" id="method_summary">Method Summary</a></th></tr>
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#addPoint(double)" class="methodRef">addPoint</a>(double hopEnergy)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  int</td><td><span class="memberName"><a href="#findFirstGE(double)" class="methodRef">findFirstGE</a>(double t)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#init()" class="methodRef">init</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setScrollingMatrix(at.ofai.music.match.ScrollingMatrix)" class="methodRef">setScrollingMatrix</a>(<a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> s)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#update()" class="methodRef">update</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#write(java.io.File,boolean)" class="methodRef">write</a>(File f, boolean doEdit)</span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+<!--
+   <p class="inherited">
+    <span class="header">Methods inherited from class java.util.<a
+   href="AbstractCollection.html">AbstractCollection</a></span>
+    <a href="#addAll">addAll</a>
+    <a href="#contains">contains</a>
+   </p>
+   <p class="inherited">
+    <span class="header">Methods inherited from class java.lang.<a
+   href="Object.html">Object</a></span>
+    <a href="#addAll">clone</a>
+    <a href="#contains">finalize</a>
+   </p>
+   <p class="inherited">
+    <span class="header">Methods inherited from interface java.util.<a
+   href="List.html">List</a></span>
+    <a href="#addAll">addAll</a>
+    <a href="#contains">contains</a>
+   </p>
+-->
+
+
+
+   <h2><a name="field_detail" id="field_detail">Field Detail</a></h2>
+
+   <h3><a name="audioFile" id="audioFile">audioFile</a></h3>
+   <div class="memberName"> <a href="AudioFile.html" class="classRef">AudioFile</a> audioFile</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="energy" id="energy">energy</a></h3>
+   <div class="memberName"> double energy</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="eventTime" id="eventTime">eventTime</a></h3>
+   <div class="memberName"> double[] eventTime</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="flag" id="flag">flag</a></h3>
+   <div class="memberName"> int[] flag</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="frameCount" id="frameCount">frameCount</a></h3>
+   <div class="memberName"> int frameCount</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="framePeriod" id="framePeriod">framePeriod</a></h3>
+   <div class="memberName"> double framePeriod</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="frameTime" id="frameTime">frameTime</a></h3>
+   <div class="memberName">static final double frameTime</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="hopCount" id="hopCount">hopCount</a></h3>
+   <div class="memberName"> int hopCount</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="hopsPerFrame" id="hopsPerFrame">hopsPerFrame</a></h3>
+   <div class="memberName"> int hopsPerFrame</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="loudness" id="loudness">loudness</a></h3>
+   <div class="memberName"> double[] loudness</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="maxTime" id="maxTime">maxTime</a></h3>
+   <div class="memberName"> double maxTime</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="MAX_LENGTH" id="MAX_LENGTH">MAX_LENGTH</a></h3>
+   <div class="memberName">static final int MAX_LENGTH</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="nextIndex" id="nextIndex">nextIndex</a></h3>
+   <div class="memberName"> int nextIndex</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="nextRefIndex" id="nextRefIndex">nextRefIndex</a></h3>
+   <div class="memberName"> int nextRefIndex</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="param" id="param">param</a></h3>
+   <div class="memberName"> WormParameters param</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="parent" id="parent">parent</a></h3>
+   <div class="memberName"> <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> parent</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="prevFrameCount" id="prevFrameCount">prevFrameCount</a></h3>
+   <div class="memberName"> int prevFrameCount</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="prevMaxTime" id="prevMaxTime">prevMaxTime</a></h3>
+   <div class="memberName"> double prevMaxTime</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="prevRefMaxTime" id="prevRefMaxTime">prevRefMaxTime</a></h3>
+   <div class="memberName"> double prevRefMaxTime</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="recalc" id="recalc">recalc</a></h3>
+   <div class="memberName">static int recalc</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="reference" id="reference">reference</a></h3>
+   <div class="memberName"> <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> reference</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="refEventTime" id="refEventTime">refEventTime</a></h3>
+   <div class="memberName"> double[] refEventTime</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="refFlag" id="refFlag">refFlag</a></h3>
+   <div class="memberName"> int[] refFlag</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="refMaxTime" id="refMaxTime">refMaxTime</a></h3>
+   <div class="memberName"> double refMaxTime</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="refStrFlag" id="refStrFlag">refStrFlag</a></h3>
+   <div class="memberName"> String[] refStrFlag</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="sm" id="sm">sm</a></h3>
+   <div class="memberName"> <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> sm</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="strFlag" id="strFlag">strFlag</a></h3>
+   <div class="memberName"> String[] strFlag</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="tempo" id="tempo">tempo</a></h3>
+   <div class="memberName"> double[] tempo</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="trackLevel" id="trackLevel">trackLevel</a></h3>
+   <div class="memberName"> double trackLevel</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="w" id="w">w</a></h3>
+   <div class="memberName"> Worm w</div>
+   <div class="memberDescription"></div>
+
+
+
+
+   <h2><a name="constructor_detail" id="constructor_detail">Constructor Detail</a></h2>
+
+   <h3><a name="WormHandler(at.ofai.music.match.PerformanceMatcher)" id="WormHandler(at.ofai.music.match.PerformanceMatcher)">WormHandler</a></h3>
+   <div class="memberName">public  WormHandler(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm)</div>
+   <div class="memberDescription"> Assumes live input against a reference worm file</div>
+
+
+
+
+   <h2><a name="method_detail" id="method_detail">Method Detail</a></h2>
+
+   <h3><a name="addPoint(double)" id="addPoint(double)">addPoint</a></h3>
+   <div class="memberName">public  void addPoint(double hopEnergy)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="findFirstGE(double)" id="findFirstGE(double)">findFirstGE</a></h3>
+   <div class="memberName">private  int findFirstGE(double t)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="init()" id="init()">init</a></h3>
+   <div class="memberName">public  void init()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setScrollingMatrix(at.ofai.music.match.ScrollingMatrix)" id="setScrollingMatrix(at.ofai.music.match.ScrollingMatrix)">setScrollingMatrix</a></h3>
+   <div class="memberName">public  void setScrollingMatrix(<a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> s)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="update()" id="update()">update</a></h3>
+   <div class="memberName">public  void update()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="write(java.io.File,boolean)" id="write(java.io.File,boolean)">write</a></h3>
+   <div class="memberName">public  void write(File f, boolean doEdit)</div>
+   <div class="memberDescription"></div>
+
+   
+   <div class="navbar">
+    <p class="nav navtop">
+      <span class="over"><a href="../../../../overview-summary.html">Overview</a></span>
+      <span class="package"><a href="package-summary.html">Package</a></span>
+      <span class="class selected">Class</span>
+      <span class="use"><a href="class-use/WormHandler.html">Use</a></span>
+      <span class="tree"><a href="package-tree.html">Tree</a></span>
+      <span class="deprecated"><a href="../../../../deprecated-list.html">Deprecated</a></span>
+      <span class="index"><a href="../../../../index-all.html">Index</a></span>
+      <span class="help"><a href="../../../../help-doc.html">Help</a></span>
+    </p>
+    <p class="nav navmid">
+      <span class="prevnext">
+       <span class="prev">Prev Class</span>
+       <span class="next">Next Class</span>
+      </span>
+      <span class="framesel">
+       <span class="frames"><a href="../../../../index.html" target="_top">Frames</a></span>
+       <span class="noframes"><a href="WormHandler.html" target="_top">NoFrames</a></span>
+      </span>
+      <span class="allclasses"><a href="../../../../allclasses-noframe.html">All Classes</a></span>
+   </p>
+   <p class="nav navbot">
+      <span class="summary">Summary:
+       <span class="nested">Nested</span>
+       <span class="field"><a href="#field_summary">Field</a></span>
+       <span class="constr"><a href="#constructor_summary">Constr</a></span>
+       <span class="method"><a href="#method_summary">Method</a></span>
+      </span>
+      <span class="detail">Detail:
+       <span class="field"><a href="#field_detail">Field</a></span>
+       <span class="constr"><a href="#constructor_detail">Constr</a></span>
+       <span class="method"><a href="#method_detail">Method</a></span>
+      </span>
+   </p>
+    <div class="navtitle">
+     
+    </div>
+    <p class="clear"><!--empty--></p>
+   </div>
+   <div class="bottom"></div>
+   </body>
+</html>

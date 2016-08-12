@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>GUI</title>
+    <meta name="keywords" content="at.ofai.music.match.GUI,GUI class" />
+    <meta name="generator" content="SinjDoc 0.5" />
+    <link href="../../../../stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="Index" href="../../../../index-all.html" />
+    <link rel="Start" href="../../../../overview-summary.html" />
+    <link rel="Up" href="package-summary.html" />
+    <link rel="Help" href="../../../../help-doc.html" />
+  </head>
+  <body class="classPage bigframe">
+   <div class="navbar">
+    <p class="nav navtop">
+      <span class="over"><a href="../../../../overview-summary.html">Overview</a></span>
+      <span class="package"><a href="package-summary.html">Package</a></span>
+      <span class="class selected">Class</span>
+      <span class="use"><a href="class-use/GUI.html">Use</a></span>
+      <span class="tree"><a href="package-tree.html">Tree</a></span>
+      <span class="deprecated"><a href="../../../../deprecated-list.html">Deprecated</a></span>
+      <span class="index"><a href="../../../../index-all.html">Index</a></span>
+      <span class="help"><a href="../../../../help-doc.html">Help</a></span>
+    </p>
+    <p class="nav navmid">
+      <span class="prevnext">
+       <span class="prev">Prev Class</span>
+       <span class="next">Next Class</span>
+      </span>
+      <span class="framesel">
+       <span class="frames"><a href="../../../../index.html" target="_top">Frames</a></span>
+       <span class="noframes"><a href="GUI.html" target="_top">NoFrames</a></span>
+      </span>
+      <span class="allclasses"><a href="../../../../allclasses-noframe.html">All Classes</a></span>
+   </p>
+   <p class="nav navbot">
+      <span class="summary">Summary:
+       <span class="nested"><a href="#nested_class_summary">Nested</a></span>
+       <span class="field"><a href="#field_summary">Field</a></span>
+       <span class="constr"><a href="#constructor_summary">Constr</a></span>
+       <span class="method"><a href="#method_summary">Method</a></span>
+      </span>
+      <span class="detail">Detail:
+       <span class="field"><a href="#field_detail">Field</a></span>
+       <span class="constr"><a href="#constructor_detail">Constr</a></span>
+       <span class="method"><a href="#method_detail">Method</a></span>
+      </span>
+   </p>
+    <div class="navtitle">
+     
+    </div>
+    <p class="clear"><!--empty--></p>
+   </div>
+   <p class="packageName">at.ofai.music.match</p>
+   <h1>  Class  GUI</h1>
+<!--
+   <p class="enclosing">
+   Enclosing class/interface: @OUTER@
+   </p>
+-->
+
+
+   <!-- XXX class hierarchy diagram goes here -->
+<!--
+   
+   <p class="implementedInterfaces">
+   All implemented interfaces: @ALL_SUPERINTERFACES@
+   </p>
+   
+   <p class="directSubclasses">
+   Direct known subclasses: @ALL_SUBCLASSES@
+   </p>
+-->
+
+
+   <p class="declaration">public
+     class 
+   <span class="className">GUI</span>
+   
+   
+      
+      <span class="extends">extends JFrame</span>
+      
+      
+        <span class="implements">implements ActionListener, MouseListener, MouseMotionListener, KeyListener</span>
+      
+   
+   </p>
+
+   <div class="description">
+   
+   </div>
+
+
+
+   <table class="nested_class_summary summary">
+     <tr><th colspan="2"><a name="nested_class_summary" id="nested_class_summary">Nested Class Summary</a></th></tr>
+
+     <tr><td> class</td><td><span class="memberName"><a href="GUI.FileNameSelection.html" class="classRef">GUI.FileNameSelection</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> class</td><td><span class="memberName"><a href="GUI.MarkDisplay.html" class="classRef">GUI.MarkDisplay</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> class</td><td><span class="memberName"><a href="GUI.TimePanel.html" class="classRef">GUI.TimePanel</a></span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="field_summary summary">
+     <tr><th colspan="2"><a name="field_summary" id="field_summary">Field Summary</a></th></tr>
+
+     <tr><td>protected static String</td><td><span class="memberName"><a href="#ALIGNING" class="fieldRef">ALIGNING</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="AligningAudioPlayer.html" class="classRef">AligningAudioPlayer</a></td><td><span class="memberName"><a href="#audioPlayer" class="fieldRef">audioPlayer</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#buttonHt" class="fieldRef">buttonHt</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#buttonWd" class="fieldRef">buttonWd</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static Color</td><td><span class="memberName"><a href="#BACKGROUND" class="fieldRef">BACKGROUND</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static Color</td><td><span class="memberName"><a href="#BACKGROUND2" class="fieldRef">BACKGROUND2</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static boolean</td><td><span class="memberName"><a href="#DEBUG" class="fieldRef">DEBUG</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected JFileChooser</td><td><span class="memberName"><a href="#fileChooser" class="fieldRef">fileChooser</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#fileNameHeight" class="fieldRef">fileNameHeight</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static Color</td><td><span class="memberName"><a href="#FOREGROUND" class="fieldRef">FOREGROUND</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="Help.html" class="classRef">Help</a></td><td><span class="memberName"><a href="#help" class="fieldRef">help</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static Color</td><td><span class="memberName"><a href="#HIGHLIGHT" class="fieldRef">HIGHLIGHT</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static String</td><td><span class="memberName"><a href="#loadFile" class="fieldRef">loadFile</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static String</td><td><span class="memberName"><a href="#LOADING" class="fieldRef">LOADING</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.MarkDisplay.html" class="classRef">MarkDisplay</a></td><td><span class="memberName"><a href="#markDisplay" class="fieldRef">markDisplay</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#maxSlider" class="fieldRef">maxSlider</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected JLabel</td><td><span class="memberName"><a href="#modeLabel" class="fieldRef">modeLabel</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#oldSlider" class="fieldRef">oldSlider</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#oldTime" class="fieldRef">oldTime</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#oldTimeDouble" class="fieldRef">oldTimeDouble</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#originX" class="fieldRef">originX</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#originY" class="fieldRef">originY</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected JSlider</td><td><span class="memberName"><a href="#playSlider" class="fieldRef">playSlider</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a></td><td><span class="memberName"><a href="#pm1" class="fieldRef">pm1</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a></td><td><span class="memberName"><a href="#pm2" class="fieldRef">pm2</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected JLabel</td><td><span class="memberName"><a href="#readyLabel" class="fieldRef">readyLabel</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static String</td><td><span class="memberName"><a href="#READY" class="fieldRef">READY</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a></td><td><span class="memberName"><a href="#scrollingMatrix" class="fieldRef">scrollingMatrix</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static long</td><td><span class="memberName"><a href="#serialVersionUID" class="fieldRef">serialVersionUID</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.TimePanel.html" class="classRef">TimePanel</a></td><td><span class="memberName"><a href="#timePanel" class="fieldRef">timePanel</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static String</td><td><span class="memberName"><a href="#title" class="fieldRef">title</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static String</td><td><span class="memberName"><a href="#version" class="fieldRef">version</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#xSize" class="fieldRef">xSize</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#ySize" class="fieldRef">ySize</a></span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="constructor_summary summary">
+     <tr><th colspan="2"><a name="constructor_summary" id="constructor_summary">Constructor Summary</a></th></tr>
+
+     <tr><td>protected </td><td><span class="memberName"><a href="#GUI(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix,boolean)" class="constructorRef">GUI</a>(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p1, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p2, <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> sm, boolean makeVisible)</span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="method_summary summary">
+     <tr><th colspan="2"><a name="method_summary" id="method_summary">Method Summary</a></th></tr>
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#actionPerformed(java.awt.event.ActionEvent)" class="methodRef">actionPerformed</a>(ActionEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#addButtons()" class="methodRef">addButtons</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#addFile(<unknown>.String)" class="methodRef">addFile</a>(String pathName)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a></td><td><span class="memberName"><a href="#addFile(<unknown>.String,boolean)" class="methodRef">addFile</a>(String pathName, boolean addToPlayer)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#addFiles(<unknown>.String[],int)" class="methodRef">addFiles</a>(String[] files, int index)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  JLabel</td><td><span class="memberName"><a href="#addLabel(<unknown>.String,int,int,int,int,java.awt.Color)" class="methodRef">addLabel</a>(String text, int x, int y, int wd, int ht, Color c)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#addLabels()" class="methodRef">addLabels</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#addMarkDisplay()" class="methodRef">addMarkDisplay</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#addSlider()" class="methodRef">addSlider</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#addTimePanel()" class="methodRef">addTimePanel</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#keyPressed(java.awt.event.KeyEvent)" class="methodRef">keyPressed</a>(KeyEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#keyReleased(java.awt.event.KeyEvent)" class="methodRef">keyReleased</a>(KeyEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#keyTyped(java.awt.event.KeyEvent)" class="methodRef">keyTyped</a>(KeyEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#loadFile()" class="methodRef">loadFile</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#mouseClicked(java.awt.event.MouseEvent)" class="methodRef">mouseClicked</a>(MouseEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#mouseDragged(java.awt.event.MouseEvent)" class="methodRef">mouseDragged</a>(MouseEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#mouseEntered(java.awt.event.MouseEvent)" class="methodRef">mouseEntered</a>(MouseEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#mouseExited(java.awt.event.MouseEvent)" class="methodRef">mouseExited</a>(MouseEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#mouseMoved(java.awt.event.MouseEvent)" class="methodRef">mouseMoved</a>(MouseEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#mousePressed(java.awt.event.MouseEvent)" class="methodRef">mousePressed</a>(MouseEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#mouseReleased(java.awt.event.MouseEvent)" class="methodRef">mouseReleased</a>(MouseEvent e)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#removeFile(at.ofai.music.match.GUI.FileNameSelection)" class="methodRef">removeFile</a>(<a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> b)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#saveWormFile()" class="methodRef">saveWormFile</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#setMode(boolean)" class="methodRef">setMode</a>(boolean fromMark)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setSlider(double)" class="methodRef">setSlider</a>(double position)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#setStatus(<unknown>.String)" class="methodRef">setStatus</a>(String status)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setTimer(double,at.ofai.music.match.AudioFile)" class="methodRef">setTimer</a>(double time, <a href="AudioFile.html" class="classRef">AudioFile</a> currentFile)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#showHelp()" class="methodRef">showHelp</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#updateMarks()" class="methodRef">updateMarks</a>()</span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+<!--
+   <p class="inherited">
+    <span class="header">Methods inherited from class java.util.<a
+   href="AbstractCollection.html">AbstractCollection</a></span>
+    <a href="#addAll">addAll</a>
+    <a href="#contains">contains</a>
+   </p>
+   <p class="inherited">
+    <span class="header">Methods inherited from class java.lang.<a
+   href="Object.html">Object</a></span>
+    <a href="#addAll">clone</a>
+    <a href="#contains">finalize</a>
+   </p>
+   <p class="inherited">
+    <span class="header">Methods inherited from interface java.util.<a
+   href="List.html">List</a></span>
+    <a href="#addAll">addAll</a>
+    <a href="#contains">contains</a>
+   </p>
+-->
+
+
+
+   <h2><a name="field_detail" id="field_detail">Field Detail</a></h2>
+
+   <h3><a name="ALIGNING" id="ALIGNING">ALIGNING</a></h3>
+   <div class="memberName">protected static final String ALIGNING</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="audioPlayer" id="audioPlayer">audioPlayer</a></h3>
+   <div class="memberName">protected <a href="AligningAudioPlayer.html" class="classRef">AligningAudioPlayer</a> audioPlayer</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="buttonHt" id="buttonHt">buttonHt</a></h3>
+   <div class="memberName">protected static final int buttonHt</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="buttonWd" id="buttonWd">buttonWd</a></h3>
+   <div class="memberName">protected static final int buttonWd</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="BACKGROUND" id="BACKGROUND">BACKGROUND</a></h3>
+   <div class="memberName">public static final Color BACKGROUND</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="BACKGROUND2" id="BACKGROUND2">BACKGROUND2</a></h3>
+   <div class="memberName">public static final Color BACKGROUND2</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="DEBUG" id="DEBUG">DEBUG</a></h3>
+   <div class="memberName">public static boolean DEBUG</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="fileChooser" id="fileChooser">fileChooser</a></h3>
+   <div class="memberName">protected JFileChooser fileChooser</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="fileNameHeight" id="fileNameHeight">fileNameHeight</a></h3>
+   <div class="memberName">protected static final int fileNameHeight</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="FOREGROUND" id="FOREGROUND">FOREGROUND</a></h3>
+   <div class="memberName">public static final Color FOREGROUND</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="help" id="help">help</a></h3>
+   <div class="memberName">protected <a href="Help.html" class="classRef">Help</a> help</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="HIGHLIGHT" id="HIGHLIGHT">HIGHLIGHT</a></h3>
+   <div class="memberName">public static final Color HIGHLIGHT</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="loadFile" id="loadFile">loadFile</a></h3>
+   <div class="memberName">protected static String loadFile</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="LOADING" id="LOADING">LOADING</a></h3>
+   <div class="memberName">protected static final String LOADING</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="markDisplay" id="markDisplay">markDisplay</a></h3>
+   <div class="memberName">protected <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.MarkDisplay.html" class="classRef">MarkDisplay</a> markDisplay</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="maxSlider" id="maxSlider">maxSlider</a></h3>
+   <div class="memberName">protected static final int maxSlider</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="modeLabel" id="modeLabel">modeLabel</a></h3>
+   <div class="memberName">protected JLabel modeLabel</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="oldSlider" id="oldSlider">oldSlider</a></h3>
+   <div class="memberName">protected int oldSlider</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="oldTime" id="oldTime">oldTime</a></h3>
+   <div class="memberName">protected int oldTime</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="oldTimeDouble" id="oldTimeDouble">oldTimeDouble</a></h3>
+   <div class="memberName">protected double oldTimeDouble</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="originX" id="originX">originX</a></h3>
+   <div class="memberName">protected int originX</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="originY" id="originY">originY</a></h3>
+   <div class="memberName">protected int originY</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="playSlider" id="playSlider">playSlider</a></h3>
+   <div class="memberName">protected JSlider playSlider</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="pm1" id="pm1">pm1</a></h3>
+   <div class="memberName">protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm1</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="pm2" id="pm2">pm2</a></h3>
+   <div class="memberName">protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm2</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="readyLabel" id="readyLabel">readyLabel</a></h3>
+   <div class="memberName">protected JLabel readyLabel</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="READY" id="READY">READY</a></h3>
+   <div class="memberName">protected static final String READY</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="scrollingMatrix" id="scrollingMatrix">scrollingMatrix</a></h3>
+   <div class="memberName">protected <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> scrollingMatrix</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="serialVersionUID" id="serialVersionUID">serialVersionUID</a></h3>
+   <div class="memberName">static final long serialVersionUID</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="timePanel" id="timePanel">timePanel</a></h3>
+   <div class="memberName">protected <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.TimePanel.html" class="classRef">TimePanel</a> timePanel</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="title" id="title">title</a></h3>
+   <div class="memberName">public static final String title</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="version" id="version">version</a></h3>
+   <div class="memberName">public static final String version</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="xSize" id="xSize">xSize</a></h3>
+   <div class="memberName">protected static final int xSize</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="ySize" id="ySize">ySize</a></h3>
+   <div class="memberName">protected static final int ySize</div>
+   <div class="memberDescription"></div>
+
+
+
+
+   <h2><a name="constructor_detail" id="constructor_detail">Constructor Detail</a></h2>
+
+   <h3><a name="GUI(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix,boolean)" id="GUI(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix,boolean)">GUI</a></h3>
+   <div class="memberName">protected  GUI(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p1, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p2, <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> sm, boolean makeVisible)</div>
+   <div class="memberDescription"></div>
+
+
+
+
+   <h2><a name="method_detail" id="method_detail">Method Detail</a></h2>
+
+   <h3><a name="actionPerformed(java.awt.event.ActionEvent)" id="actionPerformed(java.awt.event.ActionEvent)">actionPerformed</a></h3>
+   <div class="memberName">public  void actionPerformed(ActionEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addButtons()" id="addButtons()">addButtons</a></h3>
+   <div class="memberName">protected  void addButtons()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addFile(<unknown>.String)" id="addFile(<unknown>.String)">addFile</a></h3>
+   <div class="memberName">protected  void addFile(String pathName)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addFile(<unknown>.String,boolean)" id="addFile(<unknown>.String,boolean)">addFile</a></h3>
+   <div class="memberName">protected  <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> addFile(String pathName, boolean addToPlayer)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addFiles(<unknown>.String[],int)" id="addFiles(<unknown>.String[],int)">addFiles</a></h3>
+   <div class="memberName">protected  void addFiles(String[] files, int index)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addLabel(<unknown>.String,int,int,int,int,java.awt.Color)" id="addLabel(<unknown>.String,int,int,int,int,java.awt.Color)">addLabel</a></h3>
+   <div class="memberName">protected  JLabel addLabel(String text, int x, int y, int wd, int ht, Color c)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addLabels()" id="addLabels()">addLabels</a></h3>
+   <div class="memberName">protected  void addLabels()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addMarkDisplay()" id="addMarkDisplay()">addMarkDisplay</a></h3>
+   <div class="memberName">protected  void addMarkDisplay()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addSlider()" id="addSlider()">addSlider</a></h3>
+   <div class="memberName">protected  void addSlider()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addTimePanel()" id="addTimePanel()">addTimePanel</a></h3>
+   <div class="memberName">protected  void addTimePanel()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="keyPressed(java.awt.event.KeyEvent)" id="keyPressed(java.awt.event.KeyEvent)">keyPressed</a></h3>
+   <div class="memberName">public  void keyPressed(KeyEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="keyReleased(java.awt.event.KeyEvent)" id="keyReleased(java.awt.event.KeyEvent)">keyReleased</a></h3>
+   <div class="memberName">public  void keyReleased(KeyEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="keyTyped(java.awt.event.KeyEvent)" id="keyTyped(java.awt.event.KeyEvent)">keyTyped</a></h3>
+   <div class="memberName">public  void keyTyped(KeyEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="loadFile()" id="loadFile()">loadFile</a></h3>
+   <div class="memberName">protected  void loadFile()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="mouseClicked(java.awt.event.MouseEvent)" id="mouseClicked(java.awt.event.MouseEvent)">mouseClicked</a></h3>
+   <div class="memberName">public  void mouseClicked(MouseEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="mouseDragged(java.awt.event.MouseEvent)" id="mouseDragged(java.awt.event.MouseEvent)">mouseDragged</a></h3>
+   <div class="memberName">public  void mouseDragged(MouseEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="mouseEntered(java.awt.event.MouseEvent)" id="mouseEntered(java.awt.event.MouseEvent)">mouseEntered</a></h3>
+   <div class="memberName">public  void mouseEntered(MouseEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="mouseExited(java.awt.event.MouseEvent)" id="mouseExited(java.awt.event.MouseEvent)">mouseExited</a></h3>
+   <div class="memberName">public  void mouseExited(MouseEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="mouseMoved(java.awt.event.MouseEvent)" id="mouseMoved(java.awt.event.MouseEvent)">mouseMoved</a></h3>
+   <div class="memberName">public  void mouseMoved(MouseEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="mousePressed(java.awt.event.MouseEvent)" id="mousePressed(java.awt.event.MouseEvent)">mousePressed</a></h3>
+   <div class="memberName">public  void mousePressed(MouseEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="mouseReleased(java.awt.event.MouseEvent)" id="mouseReleased(java.awt.event.MouseEvent)">mouseReleased</a></h3>
+   <div class="memberName">public  void mouseReleased(MouseEvent e)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="removeFile(at.ofai.music.match.GUI.FileNameSelection)" id="removeFile(at.ofai.music.match.GUI.FileNameSelection)">removeFile</a></h3>
+   <div class="memberName">protected  void removeFile(<a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> b)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="saveWormFile()" id="saveWormFile()">saveWormFile</a></h3>
+   <div class="memberName">protected  void saveWormFile()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setMode(boolean)" id="setMode(boolean)">setMode</a></h3>
+   <div class="memberName">protected  void setMode(boolean fromMark)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setSlider(double)" id="setSlider(double)">setSlider</a></h3>
+   <div class="memberName">public  void setSlider(double position)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setStatus(<unknown>.String)" id="setStatus(<unknown>.String)">setStatus</a></h3>
+   <div class="memberName">protected  void setStatus(String status)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setTimer(double,at.ofai.music.match.AudioFile)" id="setTimer(double,at.ofai.music.match.AudioFile)">setTimer</a></h3>
+   <div class="memberName">public  void setTimer(double time, <a href="AudioFile.html" class="classRef">AudioFile</a> currentFile)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="showHelp()" id="showHelp()">showHelp</a></h3>
+   <div class="memberName">protected  void showHelp()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="updateMarks()" id="updateMarks()">updateMarks</a></h3>
+   <div class="memberName">public  void updateMarks()</div>
+   <div class="memberDescription"></div>
+
+   
+   <div class="navbar">
+    <p class="nav navtop">
+      <span class="over"><a href="../../../../overview-summary.html">Overview</a></span>
+      <span class="package"><a href="package-summary.html">Package</a></span>
+      <span class="class selected">Class</span>
+      <span class="use"><a href="class-use/GUI.html">Use</a></span>
+      <span class="tree"><a href="package-tree.html">Tree</a></span>
+      <span class="deprecated"><a href="../../../../deprecated-list.html">Deprecated</a></span>
+      <span class="index"><a href="../../../../index-all.html">Index</a></span>
+      <span class="help"><a href="../../../../help-doc.html">Help</a></span>
+    </p>
+    <p class="nav navmid">
+      <span class="prevnext">
+       <span class="prev">Prev Class</span>
+       <span class="next">Next Class</span>
+      </span>
+      <span class="framesel">
+       <span class="frames"><a href="../../../../index.html" target="_top">Frames</a></span>
+       <span class="noframes"><a href="GUI.html" target="_top">NoFrames</a></span>
+      </span>
+      <span class="allclasses"><a href="../../../../allclasses-noframe.html">All Classes</a></span>
+   </p>
+   <p class="nav navbot">
+      <span class="summary">Summary:
+       <span class="nested"><a href="#nested_class_summary">Nested</a></span>
+       <span class="field"><a href="#field_summary">Field</a></span>
+       <span class="constr"><a href="#constructor_summary">Constr</a></span>
+       <span class="method"><a href="#method_summary">Method</a></span>
+      </span>
+      <span class="detail">Detail:
+       <span class="field"><a href="#field_detail">Field</a></span>
+       <span class="constr"><a href="#constructor_detail">Constr</a></span>
+       <span class="method"><a href="#method_detail">Method</a></span>
+      </span>
+   </p>
+    <div class="navtitle">
+     
+    </div>
+    <p class="clear"><!--empty--></p>
+   </div>
+   <div class="bottom"></div>
+   </body>
+</html>

@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* Stylesheet for SinjDoc 0.5 HTML output */
+/* authored by C. Scott Ananian */
+body { color: black; background-color: white; }
+/* sans-serif fonts look better on screen. */
+@media screen { body { font-family: Verdana, Helvetica, Arial, sans-serif; } }
+/* serif fonts look better on paper. */
+@media print { body { font-family: serif; } }
+dt { font-weight: bold; }
+a:target { color: red; background-color: yellow; font-weight: bold; }
+a[href]:hover { color: black; background-color: #ccc; }
+a:link { color: blue; }
+a:visited { color: purple; }
+a:active { color: red; background-color: yellow; }
+
+a.packageRef {  }
+a.classRef {  }
+a.interfaceRef { font-style: italic; }
+a.exceptionRef {  }
+a.errorRef {  }
+
+/* alternate colors: #FFC #FC9 lightblue */
+/* see http://www.w3.org/MarkUp/Guide/Style */
+
+/* for small frame */
+body.smallframe p a { display: block; }
+body.smallframe p { margin: .1ex; padding: .1ex .1em 1ex .5em; border-bottom: 1px solid black; }
+body.smallframe h1 { font-size: 140%; color: black; background-color: #FFC; }
+body.smallframe h1 a:active { color: red; background-color: yellow; }
+body.smallframe h2 { font-size: 120%; padding: 0; margin: .1ex 0 .2ex 0; }
+body.smallframe { font-size: 9pt; line-height: 1.1; }
+
+/* for large frame */
+body.bigframe { font-size: 10pt; }
+body.bigframe h1 { text-align: left; }
+body.bigframe h2 { text-align: left; }
+body.bigframe h3 { text-align: left; }
+body.bigframe table { width: 100%; border: 1px solid black; margin: 1em 0; speak-header: once; }
+body.bigframe th { text-align: left; color: black; background-color: #FFC; font-size: 150%; border: 1px solid black; }
+body.bigframe table.linklist td:first-child a { font-weight: bold; }
+body.bigframe table.summary { border-collapse: collapse; }
+body.bigframe table.summary td { vertical-align: baseline; }
+body.bigframe table.summary tr { border-bottom: 1px dotted black; }
+body.bigframe dd a { font-weight: bold; }
+
+/* overview page */
+body.overviewPage h1 { text-align: center; }
+body.overviewPage h2, body.packagePage h2 { font-size: 11pt; }
+
+/* class page */
+body.classPage table td dt { font-weight: normal; }
+body.classPage table td dd a { font-weight: normal; }
+body.classPage h2 { color: black; background-color: #FFC; }
+body.classPage h3 { border-top: 1px solid black; }
+body.classPage h2 + h3 { border-style: none; }
+body.classPage p.packageName { font-weight: bold; font-size: 80%; margin-bottom: 0; }
+body.classPage p.packageName + * { margin-top: 0; }
+body.classPage p.declaration { border-top: 1px dotted black; border-bottom: 1px dotted black; color: black; background-color: #FFC; padding: .2em 0; }
+body.classPage p.declaration *.className { font-weight: bold; }
+body.classPage p.declaration *.extends { display: block; }
+body.classPage p.declaration *.implements { display: block; }
+body.classPage *.memberName { font-family: Andale Mono, monospace; white-space: nowrap; }
+body.classPage div.memberDescription { margin: 1em 0 1em 2em; }
+body.classPage table.summary td:first-child { font-family: Andale Mono, monospace; text-align: right; padding-right: .5em; }
+body.classPage table.summary div.memberDescription { margin-top: 0; margin-bottom: .2em; }
+
+/* navbar formatting */
+div.navbar { border-bottom: 1px solid black; border-top: 1px solid black; font-size: 9pt; font-family: Helvetica, Arial, sans-serif; }
+div.navbar *.selected { background-color: blue; color: white; font-weight: bolder; padding-top: .1em; padding-bottom: .1em; }
+div.navbar p.nav { float: left; width: auto; clear: both; padding: 0; margin: 0; }
+div.navbar p.navtop { color: black; background-color: #FFC; padding: .5ex 1em .5ex 0; }
+div.navbar p.navtop a { font-weight: bold; }div.navbar p.nav span { padding: 0 .5em 0 0; }
+div.navbar p.navmid, div.navbar p.navbot { font-size: smaller; text-transform: uppercase; }
+div.navbar p.navmid span.framesel { margin-left: 5em; }
+div.navbar p.navmid span.allclasses { margin-left: 5em; }
+div.navbar p.navbot span span { border-left: 1px solid black; margin: 0; padding: 0;  padding-left: .3em; }
+div.navbar p.navbot span span:first-child { border-style: none; }
+div.navbar p.navbot span.detail { margin-left: 4em; }
+div.navbar div.navtitle { text-align: right; font-weight: bold; font-style: italic; padding: 0 0 0 1em; }
+div.navbar p.clear { padding: 0; margin: 0; clear: both; }
+
+div.description { margin-bottom: 1em; }
+
+div.bottom {  font-size: 8pt; margin-top: 1em; }
+
+/* tag formatting */
+p.tag *.tagName { font-weight: bold; }
+p.tag *.tagContents:after { content: ", " }
+p.tag *.tagContents:last-child:after { content: "" }
+p.tag { margin-top: .5em; margin-bottom: 0; }
+p.tag + p.tag { margin-top: 0; } /* compress tags */

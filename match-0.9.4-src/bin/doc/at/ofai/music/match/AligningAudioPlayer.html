@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>AligningAudioPlayer</title>
+    <meta name="keywords" content="at.ofai.music.match.AligningAudioPlayer,AligningAudioPlayer class" />
+    <meta name="generator" content="SinjDoc 0.5" />
+    <link href="../../../../stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="Index" href="../../../../index-all.html" />
+    <link rel="Start" href="../../../../overview-summary.html" />
+    <link rel="Up" href="package-summary.html" />
+    <link rel="Help" href="../../../../help-doc.html" />
+  </head>
+  <body class="classPage bigframe">
+   <div class="navbar">
+    <p class="nav navtop">
+      <span class="over"><a href="../../../../overview-summary.html">Overview</a></span>
+      <span class="package"><a href="package-summary.html">Package</a></span>
+      <span class="class selected">Class</span>
+      <span class="use"><a href="class-use/AligningAudioPlayer.html">Use</a></span>
+      <span class="tree"><a href="package-tree.html">Tree</a></span>
+      <span class="deprecated"><a href="../../../../deprecated-list.html">Deprecated</a></span>
+      <span class="index"><a href="../../../../index-all.html">Index</a></span>
+      <span class="help"><a href="../../../../help-doc.html">Help</a></span>
+    </p>
+    <p class="nav navmid">
+      <span class="prevnext">
+       <span class="prev">Prev Class</span>
+       <span class="next">Next Class</span>
+      </span>
+      <span class="framesel">
+       <span class="frames"><a href="../../../../index.html" target="_top">Frames</a></span>
+       <span class="noframes"><a href="AligningAudioPlayer.html" target="_top">NoFrames</a></span>
+      </span>
+      <span class="allclasses"><a href="../../../../allclasses-noframe.html">All Classes</a></span>
+   </p>
+   <p class="nav navbot">
+      <span class="summary">Summary:
+       <span class="nested"><a href="#nested_class_summary">Nested</a></span>
+       <span class="field"><a href="#field_summary">Field</a></span>
+       <span class="constr"><a href="#constructor_summary">Constr</a></span>
+       <span class="method"><a href="#method_summary">Method</a></span>
+      </span>
+      <span class="detail">Detail:
+       <span class="field"><a href="#field_detail">Field</a></span>
+       <span class="constr"><a href="#constructor_detail">Constr</a></span>
+       <span class="method"><a href="#method_detail">Method</a></span>
+      </span>
+   </p>
+    <div class="navtitle">
+     
+    </div>
+    <p class="clear"><!--empty--></p>
+   </div>
+   <p class="packageName">at.ofai.music.match</p>
+   <h1>  Class  AligningAudioPlayer</h1>
+<!--
+   <p class="enclosing">
+   Enclosing class/interface: @OUTER@
+   </p>
+-->
+
+
+   <!-- XXX class hierarchy diagram goes here -->
+<!--
+   
+   <p class="implementedInterfaces">
+   All implemented interfaces: @ALL_SUPERINTERFACES@
+   </p>
+   
+   <p class="directSubclasses">
+   Direct known subclasses: @ALL_SUBCLASSES@
+   </p>
+-->
+
+
+   <p class="declaration">public
+     class 
+   <span class="className">AligningAudioPlayer</span>
+   
+   
+      
+      <span class="extends">extends Object</span>
+      
+      
+        <span class="implements">implements ChangeListener, Runnable</span>
+      
+   
+   </p>
+
+   <div class="description">
+   
+   </div>
+
+
+
+   <table class="nested_class_summary summary">
+     <tr><th colspan="2"><a name="nested_class_summary" id="nested_class_summary">Nested Class Summary</a></th></tr>
+
+     <tr><td> class</td><td><span class="memberName"><a href="AligningAudioPlayer.Matcher.html" class="classRef">AligningAudioPlayer.Matcher</a></span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="field_summary summary">
+     <tr><th colspan="2"><a name="field_summary" id="field_summary">Field Summary</a></th></tr>
+
+     <tr><td>protected long</td><td><span class="memberName"><a href="#audioLength" class="fieldRef">audioLength</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected SourceDataLine</td><td><span class="memberName"><a href="#audioOut" class="fieldRef">audioOut</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="AudioFile.html" class="classRef">AudioFile</a></td><td><span class="memberName"><a href="#currentFile" class="fieldRef">currentFile</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected long</td><td><span class="memberName"><a href="#currentPosition" class="fieldRef">currentPosition</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#defaultOutputBufferSize" class="fieldRef">defaultOutputBufferSize</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected LinkedList&lt;<a href="AudioFile.html" class="classRef">AudioFile</a>&gt;</td><td><span class="memberName"><a href="#files" class="fieldRef">files</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="GUI.html" class="classRef">GUI</a></td><td><span class="memberName"><a href="#gui" class="fieldRef">gui</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected JFileChooser</td><td><span class="memberName"><a href="#jfc" class="fieldRef">jfc</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected LinkedList&lt;Long&gt;</td><td><span class="memberName"><a href="#marks" class="fieldRef">marks</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="AligningAudioPlayer.html" class="classRef">AligningAudioPlayer</a>.<a href="AligningAudioPlayer.Matcher.html" class="classRef">Matcher</a></td><td><span class="memberName"><a href="#matcher" class="fieldRef">matcher</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected Thread</td><td><span class="memberName"><a href="#matchThread" class="fieldRef">matchThread</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#outputBufferSize" class="fieldRef">outputBufferSize</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#playFromMark" class="fieldRef">playFromMark</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#playing" class="fieldRef">playing</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a></td><td><span class="memberName"><a href="#pm1" class="fieldRef">pm1</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a></td><td><span class="memberName"><a href="#pm2" class="fieldRef">pm2</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected byte[]</td><td><span class="memberName"><a href="#readBuffer" class="fieldRef">readBuffer</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected byte[]</td><td><span class="memberName"><a href="#readBuffer2" class="fieldRef">readBuffer2</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#readBufferSize" class="fieldRef">readBufferSize</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="AudioFile.html" class="classRef">AudioFile</a></td><td><span class="memberName"><a href="#requestedFile" class="fieldRef">requestedFile</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected long</td><td><span class="memberName"><a href="#requestedPosition" class="fieldRef">requestedPosition</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a></td><td><span class="memberName"><a href="#sm" class="fieldRef">sm</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#stopRequested" class="fieldRef">stopRequested</a></span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="constructor_summary summary">
+     <tr><th colspan="2"><a name="constructor_summary" id="constructor_summary">Constructor Summary</a></th></tr>
+
+     <tr><td> </td><td><span class="memberName"><a href="#AligningAudioPlayer(at.ofai.music.match.GUI,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix)" class="constructorRef">AligningAudioPlayer</a>(<a href="GUI.html" class="classRef">GUI</a> g, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p1, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p2, <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> s)</span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="method_summary summary">
+     <tr><th colspan="2"><a name="method_summary" id="method_summary">Method Summary</a></th></tr>
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#addFile(<unknown>.String,at.ofai.music.match.GUI.FileNameSelection)" class="methodRef">addFile</a>(String fileName, <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> selector)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#addMark()" class="methodRef">addMark</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static  String</td><td><span class="memberName"><a href="#checkString(<unknown>.String,<unknown>.String)" class="methodRef">checkString</a>(String in, String prefix)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static  String</td><td><span class="memberName"><a href="#checkString(<unknown>.String,<unknown>.String,boolean)" class="methodRef">checkString</a>(String in, String prefix, boolean exc)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#clearFiles()" class="methodRef">clearFiles</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  long</td><td><span class="memberName"><a href="#correctedPosition()" class="methodRef">correctedPosition</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  long</td><td><span class="memberName"><a href="#getCurrentFileLength()" class="methodRef">getCurrentFileLength</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  int</td><td><span class="memberName"><a href="#getFileCount()" class="methodRef">getFileCount</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  ListIterator&lt;Long&gt;</td><td><span class="memberName"><a href="#getMarkListIterator()" class="methodRef">getMarkListIterator</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#load()" class="methodRef">load</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#load(<unknown>.String)" class="methodRef">load</a>(String fileName)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#nextFile()" class="methodRef">nextFile</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#pause()" class="methodRef">pause</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#play()" class="methodRef">play</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#previousFile()" class="methodRef">previousFile</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#run()" class="methodRef">run</a>()</span><div class="memberDescription"> Code for audio playback thread.  </div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#save()" class="methodRef">save</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setCurrentFile(int)" class="methodRef">setCurrentFile</a>(int index)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setCurrentFile(at.ofai.music.match.GUI.FileNameSelection)" class="methodRef">setCurrentFile</a>(<a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> selector)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setCurrentFile(at.ofai.music.match.AudioFile)" class="methodRef">setCurrentFile</a>(<a href="AudioFile.html" class="classRef">AudioFile</a> newFile)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setMode(boolean)" class="methodRef">setMode</a>(boolean fromMark)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#setPosition(long)" class="methodRef">setPosition</a>(long positionRequested)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#skipToNextMark()" class="methodRef">skipToNextMark</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#skipToPreviousMark()" class="methodRef">skipToPreviousMark</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#stateChanged(javax.swing.event.ChangeEvent)" class="methodRef">stateChanged</a>(ChangeEvent e)</span><div class="memberDescription"> Implements ChangeListener interface</div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#stop()" class="methodRef">stop</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#togglePlay()" class="methodRef">togglePlay</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#updateGUI()" class="methodRef">updateGUI</a>()</span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+<!--
+   <p class="inherited">
+    <span class="header">Methods inherited from class java.util.<a
+   href="AbstractCollection.html">AbstractCollection</a></span>
+    <a href="#addAll">addAll</a>
+    <a href="#contains">contains</a>
+   </p>
+   <p class="inherited">
+    <span class="header">Methods inherited from class java.lang.<a
+   href="Object.html">Object</a></span>
+    <a href="#addAll">clone</a>
+    <a href="#contains">finalize</a>
+   </p>
+   <p class="inherited">
+    <span class="header">Methods inherited from interface java.util.<a
+   href="List.html">List</a></span>
+    <a href="#addAll">addAll</a>
+    <a href="#contains">contains</a>
+   </p>
+-->
+
+
+
+   <h2><a name="field_detail" id="field_detail">Field Detail</a></h2>
+
+   <h3><a name="audioLength" id="audioLength">audioLength</a></h3>
+   <div class="memberName">protected long audioLength</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="audioOut" id="audioOut">audioOut</a></h3>
+   <div class="memberName">protected SourceDataLine audioOut</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="currentFile" id="currentFile">currentFile</a></h3>
+   <div class="memberName">protected <a href="AudioFile.html" class="classRef">AudioFile</a> currentFile</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="currentPosition" id="currentPosition">currentPosition</a></h3>
+   <div class="memberName">protected long currentPosition</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="defaultOutputBufferSize" id="defaultOutputBufferSize">defaultOutputBufferSize</a></h3>
+   <div class="memberName">protected static final int defaultOutputBufferSize</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="files" id="files">files</a></h3>
+   <div class="memberName">protected LinkedList&lt;<a href="AudioFile.html" class="classRef">AudioFile</a>&gt; files</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="gui" id="gui">gui</a></h3>
+   <div class="memberName">protected <a href="GUI.html" class="classRef">GUI</a> gui</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="jfc" id="jfc">jfc</a></h3>
+   <div class="memberName">protected JFileChooser jfc</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="marks" id="marks">marks</a></h3>
+   <div class="memberName">protected LinkedList&lt;Long&gt; marks</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="matcher" id="matcher">matcher</a></h3>
+   <div class="memberName">protected <a href="AligningAudioPlayer.html" class="classRef">AligningAudioPlayer</a>.<a href="AligningAudioPlayer.Matcher.html" class="classRef">Matcher</a> matcher</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="matchThread" id="matchThread">matchThread</a></h3>
+   <div class="memberName">protected Thread matchThread</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="outputBufferSize" id="outputBufferSize">outputBufferSize</a></h3>
+   <div class="memberName">protected int outputBufferSize</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="playFromMark" id="playFromMark">playFromMark</a></h3>
+   <div class="memberName">protected boolean playFromMark</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="playing" id="playing">playing</a></h3>
+   <div class="memberName">protected boolean playing</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="pm1" id="pm1">pm1</a></h3>
+   <div class="memberName">protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm1</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="pm2" id="pm2">pm2</a></h3>
+   <div class="memberName">protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm2</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="readBuffer" id="readBuffer">readBuffer</a></h3>
+   <div class="memberName">protected byte[] readBuffer</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="readBuffer2" id="readBuffer2">readBuffer2</a></h3>
+   <div class="memberName">protected byte[] readBuffer2</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="readBufferSize" id="readBufferSize">readBufferSize</a></h3>
+   <div class="memberName">protected static final int readBufferSize</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="requestedFile" id="requestedFile">requestedFile</a></h3>
+   <div class="memberName">protected <a href="AudioFile.html" class="classRef">AudioFile</a> requestedFile</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="requestedPosition" id="requestedPosition">requestedPosition</a></h3>
+   <div class="memberName">protected long requestedPosition</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="sm" id="sm">sm</a></h3>
+   <div class="memberName">protected <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> sm</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="stopRequested" id="stopRequested">stopRequested</a></h3>
+   <div class="memberName">protected boolean stopRequested</div>
+   <div class="memberDescription"></div>
+
+
+
+
+   <h2><a name="constructor_detail" id="constructor_detail">Constructor Detail</a></h2>
+
+   <h3><a name="AligningAudioPlayer(at.ofai.music.match.GUI,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix)" id="AligningAudioPlayer(at.ofai.music.match.GUI,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix)">AligningAudioPlayer</a></h3>
+   <div class="memberName">public  AligningAudioPlayer(<a href="GUI.html" class="classRef">GUI</a> g, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p1, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p2, <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> s)</div>
+   <div class="memberDescription"></div>
+
+
+
+
+   <h2><a name="method_detail" id="method_detail">Method Detail</a></h2>
+
+   <h3><a name="addFile(<unknown>.String,at.ofai.music.match.GUI.FileNameSelection)" id="addFile(<unknown>.String,at.ofai.music.match.GUI.FileNameSelection)">addFile</a></h3>
+   <div class="memberName">public  void addFile(String fileName, <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> selector)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="addMark()" id="addMark()">addMark</a></h3>
+   <div class="memberName">public  void addMark()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="checkString(<unknown>.String,<unknown>.String)" id="checkString(<unknown>.String,<unknown>.String)">checkString</a></h3>
+   <div class="memberName">public static  String checkString(String in, String prefix)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="checkString(<unknown>.String,<unknown>.String,boolean)" id="checkString(<unknown>.String,<unknown>.String,boolean)">checkString</a></h3>
+   <div class="memberName">public static  String checkString(String in, String prefix, boolean exc)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="clearFiles()" id="clearFiles()">clearFiles</a></h3>
+   <div class="memberName">protected  void clearFiles()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="correctedPosition()" id="correctedPosition()">correctedPosition</a></h3>
+   <div class="memberName">public  long correctedPosition()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="getCurrentFileLength()" id="getCurrentFileLength()">getCurrentFileLength</a></h3>
+   <div class="memberName">public  long getCurrentFileLength()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="getFileCount()" id="getFileCount()">getFileCount</a></h3>
+   <div class="memberName">public  int getFileCount()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="getMarkListIterator()" id="getMarkListIterator()">getMarkListIterator</a></h3>
+   <div class="memberName">public  ListIterator&lt;Long&gt; getMarkListIterator()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="load()" id="load()">load</a></h3>
+   <div class="memberName">public  void load()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="load(<unknown>.String)" id="load(<unknown>.String)">load</a></h3>
+   <div class="memberName">public  void load(String fileName)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="nextFile()" id="nextFile()">nextFile</a></h3>
+   <div class="memberName">public  void nextFile()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="pause()" id="pause()">pause</a></h3>
+   <div class="memberName">public  void pause()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="play()" id="play()">play</a></h3>
+   <div class="memberName">public  void play()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="previousFile()" id="previousFile()">previousFile</a></h3>
+   <div class="memberName">public  void previousFile()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="run()" id="run()">run</a></h3>
+   <div class="memberName">public  void run()</div>
+   <div class="memberDescription"> Code for audio playback thread.  Implements Runnable interface.</div>
+
+
+   <h3><a name="save()" id="save()">save</a></h3>
+   <div class="memberName">public  void save()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setCurrentFile(int)" id="setCurrentFile(int)">setCurrentFile</a></h3>
+   <div class="memberName">public  void setCurrentFile(int index)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setCurrentFile(at.ofai.music.match.GUI.FileNameSelection)" id="setCurrentFile(at.ofai.music.match.GUI.FileNameSelection)">setCurrentFile</a></h3>
+   <div class="memberName">public  void setCurrentFile(<a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> selector)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setCurrentFile(at.ofai.music.match.AudioFile)" id="setCurrentFile(at.ofai.music.match.AudioFile)">setCurrentFile</a></h3>
+   <div class="memberName">public  void setCurrentFile(<a href="AudioFile.html" class="classRef">AudioFile</a> newFile)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setMode(boolean)" id="setMode(boolean)">setMode</a></h3>
+   <div class="memberName">public  void setMode(boolean fromMark)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setPosition(long)" id="setPosition(long)">setPosition</a></h3>
+   <div class="memberName">protected  void setPosition(long positionRequested)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="skipToNextMark()" id="skipToNextMark()">skipToNextMark</a></h3>
+   <div class="memberName">public  void skipToNextMark()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="skipToPreviousMark()" id="skipToPreviousMark()">skipToPreviousMark</a></h3>
+   <div class="memberName">public  void skipToPreviousMark()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="stateChanged(javax.swing.event.ChangeEvent)" id="stateChanged(javax.swing.event.ChangeEvent)">stateChanged</a></h3>
+   <div class="memberName">public  void stateChanged(ChangeEvent e)</div>
+   <div class="memberDescription"> Implements ChangeListener interface</div>
+
+
+   <h3><a name="stop()" id="stop()">stop</a></h3>
+   <div class="memberName">public  void stop()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="togglePlay()" id="togglePlay()">togglePlay</a></h3>
+   <div class="memberName">public  void togglePlay()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="updateGUI()" id="updateGUI()">updateGUI</a></h3>
+   <div class="memberName">protected  void updateGUI()</div>
+   <div class="memberDescription"></div>
+
+   
+   <div class="navbar">
+    <p class="nav navtop">
+      <span class="over"><a href="../../../../overview-summary.html">Overview</a></span>
+      <span class="package"><a href="package-summary.html">Package</a></span>
+      <span class="class selected">Class</span>
+      <span class="use"><a href="class-use/AligningAudioPlayer.html">Use</a></span>
+      <span class="tree"><a href="package-tree.html">Tree</a></span>
+      <span class="deprecated"><a href="../../../../deprecated-list.html">Deprecated</a></span>
+      <span class="index"><a href="../../../../index-all.html">Index</a></span>
+      <span class="help"><a href="../../../../help-doc.html">Help</a></span>
+    </p>
+    <p class="nav navmid">
+      <span class="prevnext">
+       <span class="prev">Prev Class</span>
+       <span class="next">Next Class</span>
+      </span>
+      <span class="framesel">
+       <span class="frames"><a href="../../../../index.html" target="_top">Frames</a></span>
+       <span class="noframes"><a href="AligningAudioPlayer.html" target="_top">NoFrames</a></span>
+      </span>
+      <span class="allclasses"><a href="../../../../allclasses-noframe.html">All Classes</a></span>
+   </p>
+   <p class="nav navbot">
+      <span class="summary">Summary:
+       <span class="nested"><a href="#nested_class_summary">Nested</a></span>
+       <span class="field"><a href="#field_summary">Field</a></span>
+       <span class="constr"><a href="#constructor_summary">Constr</a></span>
+       <span class="method"><a href="#method_summary">Method</a></span>
+      </span>
+      <span class="detail">Detail:
+       <span class="field"><a href="#field_detail">Field</a></span>
+       <span class="constr"><a href="#constructor_detail">Constr</a></span>
+       <span class="method"><a href="#method_detail">Method</a></span>
+      </span>
+   </p>
+    <div class="navtitle">
+     
+    </div>
+    <p class="clear"><!--empty--></p>
+   </div>
+   <div class="bottom"></div>
+   </body>
+</html>

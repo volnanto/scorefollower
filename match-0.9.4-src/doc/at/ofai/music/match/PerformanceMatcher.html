@@ -1,0 +1,1337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>PerformanceMatcher</title>
+    <meta name="keywords" content="at.ofai.music.match.PerformanceMatcher,PerformanceMatcher class" />
+    <meta name="generator" content="SinjDoc 0.5" />
+    <link href="../../../../stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="Index" href="../../../../index-all.html" />
+    <link rel="Start" href="../../../../overview-summary.html" />
+    <link rel="Up" href="package-summary.html" />
+    <link rel="Help" href="../../../../help-doc.html" />
+  </head>
+  <body class="classPage bigframe">
+   <div class="navbar">
+    <p class="nav navtop">
+      <span class="over"><a href="../../../../overview-summary.html">Overview</a></span>
+      <span class="package"><a href="package-summary.html">Package</a></span>
+      <span class="class selected">Class</span>
+      <span class="use"><a href="class-use/PerformanceMatcher.html">Use</a></span>
+      <span class="tree"><a href="package-tree.html">Tree</a></span>
+      <span class="deprecated"><a href="../../../../deprecated-list.html">Deprecated</a></span>
+      <span class="index"><a href="../../../../index-all.html">Index</a></span>
+      <span class="help"><a href="../../../../help-doc.html">Help</a></span>
+    </p>
+    <p class="nav navmid">
+      <span class="prevnext">
+       <span class="prev">Prev Class</span>
+       <span class="next">Next Class</span>
+      </span>
+      <span class="framesel">
+       <span class="frames"><a href="../../../../index.html" target="_top">Frames</a></span>
+       <span class="noframes"><a href="PerformanceMatcher.html" target="_top">NoFrames</a></span>
+      </span>
+      <span class="allclasses"><a href="../../../../allclasses-noframe.html">All Classes</a></span>
+   </p>
+   <p class="nav navbot">
+      <span class="summary">Summary:
+       <span class="nested"><a href="#nested_class_summary">Nested</a></span>
+       <span class="field"><a href="#field_summary">Field</a></span>
+       <span class="constr"><a href="#constructor_summary">Constr</a></span>
+       <span class="method"><a href="#method_summary">Method</a></span>
+      </span>
+      <span class="detail">Detail:
+       <span class="field"><a href="#field_detail">Field</a></span>
+       <span class="constr"><a href="#constructor_detail">Constr</a></span>
+       <span class="method"><a href="#method_detail">Method</a></span>
+      </span>
+   </p>
+    <div class="navtitle">
+     
+    </div>
+    <p class="clear"><!--empty--></p>
+   </div>
+   <p class="packageName">at.ofai.music.match</p>
+   <h1>  Class  PerformanceMatcher</h1>
+<!--
+   <p class="enclosing">
+   Enclosing class/interface: @OUTER@
+   </p>
+-->
+
+
+   <!-- XXX class hierarchy diagram goes here -->
+<!--
+   
+   <p class="directSubclasses">
+   Direct known subclasses: @ALL_SUBCLASSES@
+   </p>
+-->
+
+
+   <p class="declaration">public
+     class 
+   <span class="className">PerformanceMatcher</span>
+   
+   
+      
+      <span class="extends">extends Object</span>
+      
+      
+   
+   </p>
+
+   <div class="description">
+    Represents an audio stream that can be matched to another audio stream of
+  the same piece of music.  The matching algorithm uses dynamic time warping.
+  The distance metric is a Euclidean metric on the first difference of the
+  magnitude spectrum with the lower frequencies on a linear scale and the
+  higher frequencies mapped onto a logarithmic scale.
+   </div>
+
+
+
+   <table class="nested_class_summary summary">
+     <tr><th colspan="2"><a name="nested_class_summary" id="nested_class_summary">Nested Class Summary</a></th></tr>
+
+     <tr><td>protected static class</td><td><span class="memberName"><a href="PerformanceMatcher.MetaType.html" class="classRef">PerformanceMatcher.MetaType</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> class</td><td><span class="memberName"><a href="PerformanceMatcher.Onset.html" class="classRef">PerformanceMatcher.Onset</a></span><div class="memberDescription"> Inner class for representing the corresponding note onset times in two
+  audio files. </div></td></tr>
+
+
+
+     <tr><td>protected static class</td><td><span class="memberName"><a href="PerformanceMatcher.PathType.html" class="classRef">PerformanceMatcher.PathType</a></span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="field_summary summary">
+     <tr><th colspan="2"><a name="field_summary" id="field_summary">Field Summary</a></th></tr>
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#ADVANCE_BOTH" class="fieldRef">ADVANCE_BOTH</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#ADVANCE_OTHER" class="fieldRef">ADVANCE_OTHER</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#ADVANCE_THIS" class="fieldRef">ADVANCE_THIS</a></span><div class="memberDescription"> Encoding of minimum-cost steps performed in DTW algorithm.</div></td></tr>
+
+
+
+     <tr><td>protected <a href="AudioFile.html" class="classRef">AudioFile</a></td><td><span class="memberName"><a href="#audioFile" class="fieldRef">audioFile</a></span><div class="memberDescription"> The AudioFile object from the AligningAudioPlayer, or null if the
+  command line version is being used.</div></td></tr>
+
+
+
+     <tr><td>protected String</td><td><span class="memberName"><a href="#audioFileName" class="fieldRef">audioFileName</a></span><div class="memberDescription"> Source of input data.
+  </div></td></tr>
+
+
+
+     <tr><td>protected AudioFormat</td><td><span class="memberName"><a href="#audioFormat" class="fieldRef">audioFormat</a></span><div class="memberDescription"> Format of the audio data in <code>pcmInputStream</code></div></td></tr>
+
+
+
+     <tr><td>protected SourceDataLine</td><td><span class="memberName"><a href="#audioOut" class="fieldRef">audioOut</a></span><div class="memberDescription"> Line for audio output (only one PerformanceMatcher should set this!)</div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#audioOutputRequested" class="fieldRef">audioOutputRequested</a></span><div class="memberDescription"> Flag to select audio output from this PerformanceMatcher</div></td></tr>
+
+
+
+     <tr><td>static boolean</td><td><span class="memberName"><a href="#batchMode" class="fieldRef">batchMode</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int[][]</td><td><span class="memberName"><a href="#bestPathCost" class="fieldRef">bestPathCost</a></span><div class="memberDescription"> The best path cost matrix.</div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#blockSize" class="fieldRef">blockSize</a></span><div class="memberDescription"> Width of the search band in FFT frames (see <code>blockTime</code>)</div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#blockTime" class="fieldRef">blockTime</a></span><div class="memberDescription"> The width of the search band (error margin) around the current match
+  position, measured in seconds. </div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#cbIndex" class="fieldRef">cbIndex</a></span><div class="memberDescription"> The index of the next position to write in the circular buffer.</div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#channels" class="fieldRef">channels</a></span><div class="memberDescription"> Number of channels of audio in <code>audioFormat</code></div></td></tr>
+
+
+
+     <tr><td>protected double[]</td><td><span class="memberName"><a href="#circBuffer" class="fieldRef">circBuffer</a></span><div class="memberDescription"> Audio data is scaled to the range [0,1] and averaged to one channel and
+  stored in a circular buffer for reuse (if hopTime &lt; fftTime).</div></td></tr>
+
+
+
+     <tr><td>protected static double</td><td><span class="memberName"><a href="#decay" class="fieldRef">decay</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected byte[][]</td><td><span class="memberName"><a href="#distance" class="fieldRef">distance</a></span><div class="memberDescription"> The distance matrix.</div></td></tr>
+
+
+
+     <tr><td>protected EventList</td><td><span class="memberName"><a href="#events" class="fieldRef">events</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#fftSize" class="fieldRef">fftSize</a></span><div class="memberDescription"> The size of an FFT frame in samples (see <code>fftTime</code>)</div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#fftTime" class="fieldRef">fftTime</a></span><div class="memberDescription"> The size of an FFT frame in seconds, as set by the command line option
+  <b>-f FFTTime</b>. </div></td></tr>
+
+
+
+     <tr><td>protected long</td><td><span class="memberName"><a href="#fileLength" class="fieldRef">fileLength</a></span><div class="memberDescription"> Total number of audio frames, or -1 for live or compressed input.</div></td></tr>
+
+
+
+     <tr><td>protected int[]</td><td><span class="memberName"><a href="#first" class="fieldRef">first</a></span><div class="memberDescription"> The bounds of each row of data in the distance and path cost matrices.</div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#firstPM" class="fieldRef">firstPM</a></span><div class="memberDescription"> Indicates which performance is considered primary (the score). </div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#frameCount" class="fieldRef">frameCount</a></span><div class="memberDescription"> The number of frames of audio data which have been read.</div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#frameRMS" class="fieldRef">frameRMS</a></span><div class="memberDescription"> RMS amplitude of the current frame.</div></td></tr>
+
+
+
+     <tr><td>protected double[][]</td><td><span class="memberName"><a href="#frames" class="fieldRef">frames</a></span><div class="memberDescription"> A block of previously seen frames are stored in this structure for
+  calculation of the distance matrix as the new frames are read in.
+  </div></td></tr>
+
+
+
+     <tr><td>protected int[]</td><td><span class="memberName"><a href="#freqMap" class="fieldRef">freqMap</a></span><div class="memberDescription"> A mapping function for mapping FFT bins to final frequency bins.
+  </div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#freqMapSize" class="fieldRef">freqMapSize</a></span><div class="memberDescription"> The number of entries in <code>freqMap</code>. </div></td></tr>
+
+
+
+     <tr><td>static boolean</td><td><span class="memberName"><a href="#guiVisible" class="fieldRef">guiVisible</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#hopSize" class="fieldRef">hopSize</a></span><div class="memberDescription"> Spacing of audio frames in samples (see <code>hopTime</code>)</div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#hopTime" class="fieldRef">hopTime</a></span><div class="memberDescription"> Spacing of audio frames (determines the amount of overlap or skip
+  between frames). </div></td></tr>
+
+
+
+     <tr><td>protected boolean[]</td><td><span class="memberName"><a href="#ignore" class="fieldRef">ignore</a></span><div class="memberDescription"> The frames to ignore because they are not annotated.</div></td></tr>
+
+
+
+     <tr><td>protected double[]</td><td><span class="memberName"><a href="#imBuffer" class="fieldRef">imBuffer</a></span><div class="memberDescription"> The imaginary part of the data for the in-place FFT computation.
+  </div></td></tr>
+
+
+
+     <tr><td>protected byte[]</td><td><span class="memberName"><a href="#inputBuffer" class="fieldRef">inputBuffer</a></span><div class="memberDescription"> Audio data is initially read in PCM format into this buffer.</div></td></tr>
+
+
+
+     <tr><td>protected int[]</td><td><span class="memberName"><a href="#last" class="fieldRef">last</a></span><div class="memberDescription"> The bounds of each row of data in the distance and path cost matrices.</div></td></tr>
+
+
+
+     <tr><td>static int</td><td><span class="memberName"><a href="#liveInputBufferSize" class="fieldRef">liveInputBufferSize</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#liveWorm" class="fieldRef">liveWorm</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#ltAverage" class="fieldRef">ltAverage</a></span><div class="memberDescription"> Long term average frame energy (in frequency domain representation).</div></td></tr>
+
+
+
+     <tr><td>protected String</td><td><span class="memberName"><a href="#matchFileName" class="fieldRef">matchFileName</a></span><div class="memberDescription"> For assessing the matching algorithm, match files are used, which give
+  the times and velocities of all notes (as recorded by the Boesendorfer
+  SE290).</div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#matchFileOffset" class="fieldRef">matchFileOffset</a></span><div class="memberDescription"> Onset time of the first note in the audio file, in order to establish
+  synchronisation between the match file and the audio data.</div></td></tr>
+
+
+
+     <tr><td>static boolean</td><td><span class="memberName"><a href="#matrixVisible" class="fieldRef">matrixVisible</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#maxFrames" class="fieldRef">maxFrames</a></span><div class="memberDescription"> The total number of frames of audio data to be read.</div></td></tr>
+
+
+
+     <tr><td>protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a>.<a href="PerformanceMatcher.MetaType.html" class="classRef">MetaType</a></td><td><span class="memberName"><a href="#metadata" class="fieldRef">metadata</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#MASK" class="fieldRef">MASK</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#MAX_LENGTH" class="fieldRef">MAX_LENGTH</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static int</td><td><span class="memberName"><a href="#MAX_RUN_COUNT" class="fieldRef">MAX_RUN_COUNT</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected double[]</td><td><span class="memberName"><a href="#newFrame" class="fieldRef">newFrame</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#normalise1" class="fieldRef">normalise1</a></span><div class="memberDescription"> Flag (command line options <b>-n1</b> and <b>-N1</b>) indicating whether
+  or not each frame of audio should be normalised to have a sum of 1.
+  </div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#normalise2" class="fieldRef">normalise2</a></span><div class="memberDescription"> Flag (command line options <b>-n2</b> and <b>-N2</b>) indicating whether
+  or not the distance metric for pairs of audio frames should be
+  normalised by the sum of the two frames.
+  </div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#normalise3" class="fieldRef">normalise3</a></span><div class="memberDescription"> Flag (command line options <b>-n3</b> and <b>-N3</b>) indicating whether
+  or not each frame of audio should be normalised by the long term average
+  of the summed energy.
+  </div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#normalise4" class="fieldRef">normalise4</a></span><div class="memberDescription"> Flag (command line options <b>-n4</b> and <b>-N4</b>) indicating whether
+  or not the distance metric for pairs of audio frames should be
+  normalised by the log of the sum of the frames.
+  </div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#normalise5" class="fieldRef">normalise5</a></span><div class="memberDescription"> Flag (command line options <b>-n5</b> and <b>-N5</b>) indicating whether
+  or not the distance metric for pairs of audio frames should be
+  set to zero between annotated positions.
+  </div></td></tr>
+
+
+
+     <tr><td>protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a></td><td><span class="memberName"><a href="#otherMatcher" class="fieldRef">otherMatcher</a></span><div class="memberDescription"> Points to the other performance with which this one is being compared.
+  </div></td></tr>
+
+
+
+     <tr><td>static int</td><td><span class="memberName"><a href="#outputBufferSize" class="fieldRef">outputBufferSize</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected String</td><td><span class="memberName"><a href="#outputFileName" class="fieldRef">outputFileName</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a>.<a href="PerformanceMatcher.PathType.html" class="classRef">PathType</a></td><td><span class="memberName"><a href="#outputType" class="fieldRef">outputType</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#paused" class="fieldRef">paused</a></span><div class="memberDescription"> Interactive control of the matching process allows pausing computation
+  of the cost matrices in one direction.</div></td></tr>
+
+
+
+     <tr><td>protected AudioInputStream</td><td><span class="memberName"><a href="#pcmInputStream" class="fieldRef">pcmInputStream</a></span><div class="memberDescription"> Uncompressed version of <code>rawInputStream</code>.
+  </div></td></tr>
+
+
+
+     <tr><td> Plot</td><td><span class="memberName"><a href="#plot" class="fieldRef">plot</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double[]</td><td><span class="memberName"><a href="#plotX" class="fieldRef">plotX</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td> double[]</td><td><span class="memberName"><a href="#plotY" class="fieldRef">plotY</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected double[]</td><td><span class="memberName"><a href="#prevFrame" class="fieldRef">prevFrame</a></span><div class="memberDescription"> The most recent frame; used for calculating the frame to frame
+  spectral difference.</div></td></tr>
+
+
+
+     <tr><td>protected <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a></td><td><span class="memberName"><a href="#progressCallback" class="fieldRef">progressCallback</a></span><div class="memberDescription"> GUI component which shows progress of alignment.</div></td></tr>
+
+
+
+     <tr><td>protected AudioInputStream</td><td><span class="memberName"><a href="#rawInputStream" class="fieldRef">rawInputStream</a></span><div class="memberDescription"> Input data for this performance (possibly in compressed format)</div></td></tr>
+
+
+
+     <tr><td>protected double[]</td><td><span class="memberName"><a href="#reBuffer" class="fieldRef">reBuffer</a></span><div class="memberDescription"> The real part of the data for the in-place FFT computation.
+  </div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#referenceFrequency" class="fieldRef">referenceFrequency</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected int</td><td><span class="memberName"><a href="#runCount" class="fieldRef">runCount</a></span><div class="memberDescription"> The number of frames sequentially processed by this matcher, without a
+  frame of the other matcher being processed.</div></td></tr>
+
+
+
+     <tr><td>protected float</td><td><span class="memberName"><a href="#sampleRate" class="fieldRef">sampleRate</a></span><div class="memberDescription"> Sample rate of audio in <code>audioFormat</code></div></td></tr>
+
+
+
+     <tr><td>protected double</td><td><span class="memberName"><a href="#scale" class="fieldRef">scale</a></span><div class="memberDescription"> Scaling factor for distance metric; must guarantee that the final value
+  fits in the data type used, that is, (unsigned) byte. </div></td></tr>
+
+
+
+     <tr><td>protected static double</td><td><span class="memberName"><a href="#silenceThreshold" class="fieldRef">silenceThreshold</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected static boolean</td><td><span class="memberName"><a href="#silent" class="fieldRef">silent</a></span><div class="memberDescription"> Disable or enable debugging output</div></td></tr>
+
+
+
+     <tr><td>static boolean</td><td><span class="memberName"><a href="#stop" class="fieldRef">stop</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#useChromaFrequencyMap" class="fieldRef">useChromaFrequencyMap</a></span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected boolean</td><td><span class="memberName"><a href="#useSpectralDifference" class="fieldRef">useSpectralDifference</a></span><div class="memberDescription"> Flag (command line options <b>-d</b> and <b>-D</b>) indicating whether
+  or not the half-wave rectified spectral difference should be used in
+  calculating the distance metric for pairs of audio frames, instead of
+  the straight spectrum values. </div></td></tr>
+
+
+
+     <tr><td>protected double[]</td><td><span class="memberName"><a href="#window" class="fieldRef">window</a></span><div class="memberDescription"> The window function for the STFT, currently a Hamming window.</div></td></tr>
+
+
+
+     <tr><td>protected <a href="WormHandler.html" class="classRef">WormHandler</a></td><td><span class="memberName"><a href="#wormHandler" class="fieldRef">wormHandler</a></span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="constructor_summary summary">
+     <tr><th colspan="2"><a name="constructor_summary" id="constructor_summary">Constructor Summary</a></th></tr>
+
+     <tr><td> </td><td><span class="memberName"><a href="#PerformanceMatcher(at.ofai.music.match.PerformanceMatcher)" class="constructorRef">PerformanceMatcher</a>(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p)</span><div class="memberDescription"> Constructor for PerformanceMatcher.</div></td></tr>
+
+   </table>
+
+
+
+
+   <table class="method_summary summary">
+     <tr><th colspan="2"><a name="method_summary" id="method_summary">Method Summary</a></th></tr>
+
+     <tr><td>protected  int</td><td><span class="memberName"><a href="#calcDistance(double[],double[])" class="methodRef">calcDistance</a>(double[] f1, double[] f2)</span><div class="memberDescription"> Calculates the Manhattan distance between two vectors, with an optional
+  normalisation by the combined values in the vectors. </div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#closeStreams()" class="methodRef">closeStreams</a>()</span><div class="memberDescription"> Closes the input stream(s) associated with this object.</div></td></tr>
+
+
+
+     <tr><td>static  void</td><td><span class="memberName"><a href="#doMatch(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix)" class="methodRef">doMatch</a>(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm1, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm2, <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> s)</span><div class="memberDescription"> Tracks a performance by choosing a likely band for the optimal path.</div></td></tr>
+
+
+
+     <tr><td>  LinkedList&lt;<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a>.<a href="PerformanceMatcher.Onset.html" class="classRef">Onset</a>&gt;</td><td><span class="memberName"><a href="#evaluateMatch(at.ofai.music.match.PerformanceMatcher)" class="methodRef">evaluateMatch</a>(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm)</span><div class="memberDescription"> Matches two match files, creating a composite list of corresponding
+  onset times, consisting of the mean onset times of the notes in each
+  notated score position. </div></td></tr>
+
+
+
+     <tr><td>  boolean</td><td><span class="memberName"><a href="#getFrame()" class="methodRef">getFrame</a>()</span><div class="memberDescription"> Reads a frame of input data, averages the channels to mono, scales
+  to a maximum possible absolute value of 1, and stores the audio data
+  in a circular input buffer. </div></td></tr>
+
+
+
+     <tr><td>protected  int</td><td><span class="memberName"><a href="#getValue(int,int,boolean)" class="methodRef">getValue</a>(int i, int j, boolean firstAttempt)</span><div class="memberDescription"> Retrieves values from the minimum cost matrix.</div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#init()" class="methodRef">init</a>()</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>static  void</td><td><span class="memberName"><a href="#main(<unknown>.String[])" class="methodRef">main</a>(String[] args)</span><div class="memberDescription"> Entry point for command line version of performance matcher.</div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#makeChromaFrequencyMap(int,float,double)" class="methodRef">makeChromaFrequencyMap</a>(int fftSize, float sR, double refFreq)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#makeFreqMap(int,float,double)" class="methodRef">makeFreqMap</a>(int fftSize, float sampleRate, double refFreq)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#makeStandardFrequencyMap(int,float,double)" class="methodRef">makeStandardFrequencyMap</a>(int fftSize, float sampleRate, double refFreq)</span><div class="memberDescription"> Creates a map of FFT frequency bins to comparison bins.
+  </div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#print()" class="methodRef">print</a>()</span><div class="memberDescription"> For debugging, outputs information about the PerformanceMatcher to
+  standard error.</div></td></tr>
+
+
+
+     <tr><td>static  int</td><td><span class="memberName"><a href="#processArgs(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,<unknown>.String[])" class="methodRef">processArgs</a>(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm1, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm2, String[] args)</span><div class="memberDescription"> Processes command line arguments.</div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#processFrame()" class="methodRef">processFrame</a>()</span><div class="memberDescription"> Processes a frame of audio data by first computing the STFT with a
+  Hamming window, then scaling the frequency axis with an arbitrary
+  mapping, then (optionally) computing the half-wave
+  rectified spectral difference from the previous frame, then (optionally)
+  normalising to a sum of 1, then calculating the distance to all frames
+  stored in the otherMatcher and storing them in the distance matrix, and
+  finally updating the optimal path matrix using the dynamic time warping
+  algorithm.</div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setInputFile(at.ofai.music.match.AudioFile)" class="methodRef">setInputFile</a>(<a href="AudioFile.html" class="classRef">AudioFile</a> f)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setInputFile(<unknown>.String)" class="methodRef">setInputFile</a>(String fileName)</span><div class="memberDescription"> Sets up the streams and buffers for audio file input.
+  </div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setLabelFile(<unknown>.String)" class="methodRef">setLabelFile</a>(String fileName)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setLiveInput()" class="methodRef">setLiveInput</a>()</span><div class="memberDescription"> Sets up the streams and buffers for live audio input (CD quality).
+  </div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setMatchFile(<unknown>.String,double,boolean)" class="methodRef">setMatchFile</a>(String fileName, double tStart, boolean isWorm)</span><div class="memberDescription"> Sets the match file for automatic evaluation of the PerformanceMatcher.</div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setMatchFile(<unknown>.String,double)" class="methodRef">setMatchFile</a>(String fileName, double tStart)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setOtherMatcher(at.ofai.music.match.PerformanceMatcher)" class="methodRef">setOtherMatcher</a>(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p)</span><div class="memberDescription"> Adds a link to the PerformanceMatcher object representing the
+  performance which is going to be matched to this one.</div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#setProgressCallback(at.ofai.music.match.GUI.FileNameSelection)" class="methodRef">setProgressCallback</a>(<a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> c)</span><div class="memberDescription"> Adds a link to the GUI component which shows the progress of matching.</div></td></tr>
+
+
+
+     <tr><td>protected  void</td><td><span class="memberName"><a href="#setValue(int,int,int,int,int)" class="methodRef">setValue</a>(int i, int j, int dir, int value, int dMN)</span><div class="memberDescription"> Stores entries in the distance matrix and the optimal path matrix.</div></td></tr>
+
+
+
+     <tr><td>  String</td><td><span class="memberName"><a href="#toString()" class="methodRef">toString</a>()</span><div class="memberDescription"> Gives some basic `header' information about the PerformanceMatcher.</div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#writeLabelFile(at.ofai.music.match.ScrollingMatrix)" class="methodRef">writeLabelFile</a>(<a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> sm)</span><div class="memberDescription"></div></td></tr>
+
+
+
+     <tr><td>  void</td><td><span class="memberName"><a href="#writeMidiFile(at.ofai.music.match.ScrollingMatrix)" class="methodRef">writeMidiFile</a>(<a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> sm)</span><div class="memberDescription"></div></td></tr>
+
+   </table>
+
+
+
+<!--
+   <p class="inherited">
+    <span class="header">Methods inherited from class java.util.<a
+   href="AbstractCollection.html">AbstractCollection</a></span>
+    <a href="#addAll">addAll</a>
+    <a href="#contains">contains</a>
+   </p>
+   <p class="inherited">
+    <span class="header">Methods inherited from class java.lang.<a
+   href="Object.html">Object</a></span>
+    <a href="#addAll">clone</a>
+    <a href="#contains">finalize</a>
+   </p>
+   <p class="inherited">
+    <span class="header">Methods inherited from interface java.util.<a
+   href="List.html">List</a></span>
+    <a href="#addAll">addAll</a>
+    <a href="#contains">contains</a>
+   </p>
+-->
+
+
+
+   <h2><a name="field_detail" id="field_detail">Field Detail</a></h2>
+
+   <h3><a name="ADVANCE_BOTH" id="ADVANCE_BOTH">ADVANCE_BOTH</a></h3>
+   <div class="memberName">protected static final int ADVANCE_BOTH</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="ADVANCE_OTHER" id="ADVANCE_OTHER">ADVANCE_OTHER</a></h3>
+   <div class="memberName">protected static final int ADVANCE_OTHER</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="ADVANCE_THIS" id="ADVANCE_THIS">ADVANCE_THIS</a></h3>
+   <div class="memberName">protected static final int ADVANCE_THIS</div>
+   <div class="memberDescription"> Encoding of minimum-cost steps performed in DTW algorithm.</div>
+
+
+   <h3><a name="audioFile" id="audioFile">audioFile</a></h3>
+   <div class="memberName">protected <a href="AudioFile.html" class="classRef">AudioFile</a> audioFile</div>
+   <div class="memberDescription"> The AudioFile object from the AligningAudioPlayer, or null if the
+  command line version is being used.</div>
+
+
+   <h3><a name="audioFileName" id="audioFileName">audioFileName</a></h3>
+   <div class="memberName">protected String audioFileName</div>
+   <div class="memberDescription"> Source of input data.
+  Later to be extended to include live input from the sound card.</div>
+
+
+   <h3><a name="audioFormat" id="audioFormat">audioFormat</a></h3>
+   <div class="memberName">protected AudioFormat audioFormat</div>
+   <div class="memberDescription"> Format of the audio data in <code>pcmInputStream</code></div>
+
+
+   <h3><a name="audioOut" id="audioOut">audioOut</a></h3>
+   <div class="memberName">protected SourceDataLine audioOut</div>
+   <div class="memberDescription"> Line for audio output (only one PerformanceMatcher should set this!)</div>
+
+
+   <h3><a name="audioOutputRequested" id="audioOutputRequested">audioOutputRequested</a></h3>
+   <div class="memberName">protected boolean audioOutputRequested</div>
+   <div class="memberDescription"> Flag to select audio output from this PerformanceMatcher</div>
+
+
+   <h3><a name="batchMode" id="batchMode">batchMode</a></h3>
+   <div class="memberName">public static boolean batchMode</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="bestPathCost" id="bestPathCost">bestPathCost</a></h3>
+   <div class="memberName">protected int[][] bestPathCost</div>
+   <div class="memberDescription"> The best path cost matrix.</div>
+
+
+   <h3><a name="blockSize" id="blockSize">blockSize</a></h3>
+   <div class="memberName">protected int blockSize</div>
+   <div class="memberDescription"> Width of the search band in FFT frames (see <code>blockTime</code>)</div>
+
+
+   <h3><a name="blockTime" id="blockTime">blockTime</a></h3>
+   <div class="memberName">protected double blockTime</div>
+   <div class="memberDescription"> The width of the search band (error margin) around the current match
+  position, measured in seconds. Strictly speaking the width is measured
+  backwards from the current point, since the algorithm has to work
+  causally.</div>
+
+
+   <h3><a name="cbIndex" id="cbIndex">cbIndex</a></h3>
+   <div class="memberName">protected int cbIndex</div>
+   <div class="memberDescription"> The index of the next position to write in the circular buffer.</div>
+
+
+   <h3><a name="channels" id="channels">channels</a></h3>
+   <div class="memberName">protected int channels</div>
+   <div class="memberDescription"> Number of channels of audio in <code>audioFormat</code></div>
+
+
+   <h3><a name="circBuffer" id="circBuffer">circBuffer</a></h3>
+   <div class="memberName">protected double[] circBuffer</div>
+   <div class="memberDescription"> Audio data is scaled to the range [0,1] and averaged to one channel and
+  stored in a circular buffer for reuse (if hopTime &lt; fftTime).</div>
+
+
+   <h3><a name="decay" id="decay">decay</a></h3>
+   <div class="memberName">protected static final double decay</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="distance" id="distance">distance</a></h3>
+   <div class="memberName">protected byte[][] distance</div>
+   <div class="memberDescription"> The distance matrix.</div>
+
+
+   <h3><a name="events" id="events">events</a></h3>
+   <div class="memberName">protected EventList events</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="fftSize" id="fftSize">fftSize</a></h3>
+   <div class="memberName">protected int fftSize</div>
+   <div class="memberDescription"> The size of an FFT frame in samples (see <code>fftTime</code>)</div>
+
+
+   <h3><a name="fftTime" id="fftTime">fftTime</a></h3>
+   <div class="memberName">protected double fftTime</div>
+   <div class="memberDescription"> The size of an FFT frame in seconds, as set by the command line option
+  <b>-f FFTTime</b>. (Default = 0.04644s).  Note that the value is not
+  taken to be precise; it is adjusted so that <code>fftSize</code> is
+  always a power of 2.</div>
+
+
+   <h3><a name="fileLength" id="fileLength">fileLength</a></h3>
+   <div class="memberName">protected long fileLength</div>
+   <div class="memberDescription"> Total number of audio frames, or -1 for live or compressed input.</div>
+
+
+   <h3><a name="first" id="first">first</a></h3>
+   <div class="memberName">protected int[] first</div>
+   <div class="memberDescription"> The bounds of each row of data in the distance and path cost matrices.</div>
+
+
+   <h3><a name="firstPM" id="firstPM">firstPM</a></h3>
+   <div class="memberName">protected boolean firstPM</div>
+   <div class="memberDescription"> Indicates which performance is considered primary (the score). This is
+  the performance shown on the vertical axis, and referred to as "this" in
+  the codes for the direction of DTW steps.</div>
+
+
+   <h3><a name="frameCount" id="frameCount">frameCount</a></h3>
+   <div class="memberName">protected int frameCount</div>
+   <div class="memberDescription"> The number of frames of audio data which have been read.</div>
+
+
+   <h3><a name="frameRMS" id="frameRMS">frameRMS</a></h3>
+   <div class="memberName">protected double frameRMS</div>
+   <div class="memberDescription"> RMS amplitude of the current frame.</div>
+
+
+   <h3><a name="frames" id="frames">frames</a></h3>
+   <div class="memberName">protected double[][] frames</div>
+   <div class="memberDescription"> A block of previously seen frames are stored in this structure for
+  calculation of the distance matrix as the new frames are read in.
+  One can think of the structure of the array as a circular buffer of
+  vectors. The last element of each vector stores the total energy.</div>
+
+
+   <h3><a name="freqMap" id="freqMap">freqMap</a></h3>
+   <div class="memberName">protected int[] freqMap</div>
+   <div class="memberDescription"> A mapping function for mapping FFT bins to final frequency bins.
+  The mapping is linear (1-1) until the resolution reaches 2 points per
+  semitone, then logarithmic with a semitone resolution.  e.g. for
+  44.1kHz sampling rate and fftSize of 2048 (46ms), bin spacing is
+  21.5Hz, which is mapped linearly for bins 0-34 (0 to 732Hz), and
+  logarithmically for the remaining bins (midi notes 79 to 127, bins 35 to
+  83), where all energy above note 127 is mapped into the final bin.</div>
+
+
+   <h3><a name="freqMapSize" id="freqMapSize">freqMapSize</a></h3>
+   <div class="memberName">protected int freqMapSize</div>
+   <div class="memberDescription"> The number of entries in <code>freqMap</code>. Note that the length of
+  the array is greater, because its size is not known at creation time.</div>
+
+
+   <h3><a name="guiVisible" id="guiVisible">guiVisible</a></h3>
+   <div class="memberName">public static boolean guiVisible</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="hopSize" id="hopSize">hopSize</a></h3>
+   <div class="memberName">protected int hopSize</div>
+   <div class="memberDescription"> Spacing of audio frames in samples (see <code>hopTime</code>)</div>
+
+
+   <h3><a name="hopTime" id="hopTime">hopTime</a></h3>
+   <div class="memberName">protected double hopTime</div>
+   <div class="memberDescription"> Spacing of audio frames (determines the amount of overlap or skip
+  between frames). This value is expressed in seconds and can be set by
+  the command line option <b>-h hopTime</b>. (Default = 0.020s)</div>
+
+
+   <h3><a name="ignore" id="ignore">ignore</a></h3>
+   <div class="memberName">protected boolean[] ignore</div>
+   <div class="memberDescription"> The frames to ignore because they are not annotated.</div>
+
+
+   <h3><a name="imBuffer" id="imBuffer">imBuffer</a></h3>
+   <div class="memberName">protected double[] imBuffer</div>
+   <div class="memberDescription"> The imaginary part of the data for the in-place FFT computation.
+  Since input data is real, this initially contains zeros.</div>
+
+
+   <h3><a name="inputBuffer" id="inputBuffer">inputBuffer</a></h3>
+   <div class="memberName">protected byte[] inputBuffer</div>
+   <div class="memberDescription"> Audio data is initially read in PCM format into this buffer.</div>
+
+
+   <h3><a name="last" id="last">last</a></h3>
+   <div class="memberName">protected int[] last</div>
+   <div class="memberDescription"> The bounds of each row of data in the distance and path cost matrices.</div>
+
+
+   <h3><a name="liveInputBufferSize" id="liveInputBufferSize">liveInputBufferSize</a></h3>
+   <div class="memberName">public static final int liveInputBufferSize</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="liveWorm" id="liveWorm">liveWorm</a></h3>
+   <div class="memberName">protected boolean liveWorm</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="ltAverage" id="ltAverage">ltAverage</a></h3>
+   <div class="memberName">protected double ltAverage</div>
+   <div class="memberDescription"> Long term average frame energy (in frequency domain representation).</div>
+
+
+   <h3><a name="matchFileName" id="matchFileName">matchFileName</a></h3>
+   <div class="memberName">protected String matchFileName</div>
+   <div class="memberDescription"> For assessing the matching algorithm, match files are used, which give
+  the times and velocities of all notes (as recorded by the Boesendorfer
+  SE290).</div>
+
+
+   <h3><a name="matchFileOffset" id="matchFileOffset">matchFileOffset</a></h3>
+   <div class="memberName">protected double matchFileOffset</div>
+   <div class="memberDescription"> Onset time of the first note in the audio file, in order to establish
+  synchronisation between the match file and the audio data.</div>
+
+
+   <h3><a name="matrixVisible" id="matrixVisible">matrixVisible</a></h3>
+   <div class="memberName">public static boolean matrixVisible</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="maxFrames" id="maxFrames">maxFrames</a></h3>
+   <div class="memberName">protected int maxFrames</div>
+   <div class="memberDescription"> The total number of frames of audio data to be read.</div>
+
+
+   <h3><a name="metadata" id="metadata">metadata</a></h3>
+   <div class="memberName">protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a>.<a href="PerformanceMatcher.MetaType.html" class="classRef">MetaType</a> metadata</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="MASK" id="MASK">MASK</a></h3>
+   <div class="memberName">protected static final int MASK</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="MAX_LENGTH" id="MAX_LENGTH">MAX_LENGTH</a></h3>
+   <div class="memberName">protected static final int MAX_LENGTH</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="MAX_RUN_COUNT" id="MAX_RUN_COUNT">MAX_RUN_COUNT</a></h3>
+   <div class="memberName">protected static final int MAX_RUN_COUNT</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="newFrame" id="newFrame">newFrame</a></h3>
+   <div class="memberName">protected double[] newFrame</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="normalise1" id="normalise1">normalise1</a></h3>
+   <div class="memberName">protected boolean normalise1</div>
+   <div class="memberDescription"> Flag (command line options <b>-n1</b> and <b>-N1</b>) indicating whether
+  or not each frame of audio should be normalised to have a sum of 1.
+  (Default = true).</div>
+
+
+   <h3><a name="normalise2" id="normalise2">normalise2</a></h3>
+   <div class="memberName">protected boolean normalise2</div>
+   <div class="memberDescription"> Flag (command line options <b>-n2</b> and <b>-N2</b>) indicating whether
+  or not the distance metric for pairs of audio frames should be
+  normalised by the sum of the two frames.
+  (Default = false).</div>
+
+
+   <h3><a name="normalise3" id="normalise3">normalise3</a></h3>
+   <div class="memberName">protected boolean normalise3</div>
+   <div class="memberDescription"> Flag (command line options <b>-n3</b> and <b>-N3</b>) indicating whether
+  or not each frame of audio should be normalised by the long term average
+  of the summed energy.
+  (Default = false; assumes normalise1 == false).</div>
+
+
+   <h3><a name="normalise4" id="normalise4">normalise4</a></h3>
+   <div class="memberName">protected boolean normalise4</div>
+   <div class="memberDescription"> Flag (command line options <b>-n4</b> and <b>-N4</b>) indicating whether
+  or not the distance metric for pairs of audio frames should be
+  normalised by the log of the sum of the frames.
+  (Default = true; assumes normalise2 == false).</div>
+
+
+   <h3><a name="normalise5" id="normalise5">normalise5</a></h3>
+   <div class="memberName">protected boolean normalise5</div>
+   <div class="memberDescription"> Flag (command line options <b>-n5</b> and <b>-N5</b>) indicating whether
+  or not the distance metric for pairs of audio frames should be
+  set to zero between annotated positions.
+  (Default = false).</div>
+
+
+   <h3><a name="otherMatcher" id="otherMatcher">otherMatcher</a></h3>
+   <div class="memberName">protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> otherMatcher</div>
+   <div class="memberDescription"> Points to the other performance with which this one is being compared.
+  The data for the distance metric and the dynamic time warping is shared
+  between the two matchers. In the original version, only one of the two
+  performance matchers contained the distance metric. (See
+  <code>firstPM</code>)</div>
+
+
+   <h3><a name="outputBufferSize" id="outputBufferSize">outputBufferSize</a></h3>
+   <div class="memberName">public static final int outputBufferSize</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="outputFileName" id="outputFileName">outputFileName</a></h3>
+   <div class="memberName">protected String outputFileName</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="outputType" id="outputType">outputType</a></h3>
+   <div class="memberName">protected <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a>.<a href="PerformanceMatcher.PathType.html" class="classRef">PathType</a> outputType</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="paused" id="paused">paused</a></h3>
+   <div class="memberName">protected boolean paused</div>
+   <div class="memberDescription"> Interactive control of the matching process allows pausing computation
+  of the cost matrices in one direction.</div>
+
+
+   <h3><a name="pcmInputStream" id="pcmInputStream">pcmInputStream</a></h3>
+   <div class="memberName">protected AudioInputStream pcmInputStream</div>
+   <div class="memberDescription"> Uncompressed version of <code>rawInputStream</code>.
+  In the (normal) case where the input is already PCM data,
+  <code>rawInputStream == pcmInputStream</code></div>
+
+
+   <h3><a name="plot" id="plot">plot</a></h3>
+   <div class="memberName"> Plot plot</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="plotX" id="plotX">plotX</a></h3>
+   <div class="memberName"> double[] plotX</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="plotY" id="plotY">plotY</a></h3>
+   <div class="memberName"> double[] plotY</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="prevFrame" id="prevFrame">prevFrame</a></h3>
+   <div class="memberName">protected double[] prevFrame</div>
+   <div class="memberDescription"> The most recent frame; used for calculating the frame to frame
+  spectral difference.</div>
+
+
+   <h3><a name="progressCallback" id="progressCallback">progressCallback</a></h3>
+   <div class="memberName">protected <a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> progressCallback</div>
+   <div class="memberDescription"> GUI component which shows progress of alignment.</div>
+
+
+   <h3><a name="rawInputStream" id="rawInputStream">rawInputStream</a></h3>
+   <div class="memberName">protected AudioInputStream rawInputStream</div>
+   <div class="memberDescription"> Input data for this performance (possibly in compressed format)</div>
+
+
+   <h3><a name="reBuffer" id="reBuffer">reBuffer</a></h3>
+   <div class="memberName">protected double[] reBuffer</div>
+   <div class="memberDescription"> The real part of the data for the in-place FFT computation.
+  Since input data is real, this initially contains the input data.</div>
+
+
+   <h3><a name="referenceFrequency" id="referenceFrequency">referenceFrequency</a></h3>
+   <div class="memberName">protected double referenceFrequency</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="runCount" id="runCount">runCount</a></h3>
+   <div class="memberName">protected int runCount</div>
+   <div class="memberDescription"> The number of frames sequentially processed by this matcher, without a
+  frame of the other matcher being processed.</div>
+
+
+   <h3><a name="sampleRate" id="sampleRate">sampleRate</a></h3>
+   <div class="memberName">protected float sampleRate</div>
+   <div class="memberDescription"> Sample rate of audio in <code>audioFormat</code></div>
+
+
+   <h3><a name="scale" id="scale">scale</a></h3>
+   <div class="memberName">protected double scale</div>
+   <div class="memberDescription"> Scaling factor for distance metric; must guarantee that the final value
+  fits in the data type used, that is, (unsigned) byte. (Default = 16).</div>
+
+
+   <h3><a name="silenceThreshold" id="silenceThreshold">silenceThreshold</a></h3>
+   <div class="memberName">protected static final double silenceThreshold</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="silent" id="silent">silent</a></h3>
+   <div class="memberName">protected static boolean silent</div>
+   <div class="memberDescription"> Disable or enable debugging output</div>
+
+
+   <h3><a name="stop" id="stop">stop</a></h3>
+   <div class="memberName">public static boolean stop</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="useChromaFrequencyMap" id="useChromaFrequencyMap">useChromaFrequencyMap</a></h3>
+   <div class="memberName">protected boolean useChromaFrequencyMap</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="useSpectralDifference" id="useSpectralDifference">useSpectralDifference</a></h3>
+   <div class="memberName">protected boolean useSpectralDifference</div>
+   <div class="memberDescription"> Flag (command line options <b>-d</b> and <b>-D</b>) indicating whether
+  or not the half-wave rectified spectral difference should be used in
+  calculating the distance metric for pairs of audio frames, instead of
+  the straight spectrum values. (Default = true).</div>
+
+
+   <h3><a name="window" id="window">window</a></h3>
+   <div class="memberName">protected double[] window</div>
+   <div class="memberDescription"> The window function for the STFT, currently a Hamming window.</div>
+
+
+   <h3><a name="wormHandler" id="wormHandler">wormHandler</a></h3>
+   <div class="memberName">protected <a href="WormHandler.html" class="classRef">WormHandler</a> wormHandler</div>
+   <div class="memberDescription"></div>
+
+
+
+
+   <h2><a name="constructor_detail" id="constructor_detail">Constructor Detail</a></h2>
+
+   <h3><a name="PerformanceMatcher(at.ofai.music.match.PerformanceMatcher)" id="PerformanceMatcher(at.ofai.music.match.PerformanceMatcher)">PerformanceMatcher</a></h3>
+   <div class="memberName">public  PerformanceMatcher(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p)</div>
+   <div class="memberDescription"> Constructor for PerformanceMatcher.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">p The PerformanceMatcher representing the performance with which
+  this one is going to be matched.  Some information is shared between the
+  two matchers (currently one possesses the distance matrix and optimal
+  path matrix).</span> </p>
+</div>
+
+
+
+
+   <h2><a name="method_detail" id="method_detail">Method Detail</a></h2>
+
+   <h3><a name="calcDistance(double[],double[])" id="calcDistance(double[],double[])">calcDistance</a></h3>
+   <div class="memberName">protected  int calcDistance(double[] f1, double[] f2)</div>
+   <div class="memberDescription"> Calculates the Manhattan distance between two vectors, with an optional
+  normalisation by the combined values in the vectors. Since the
+  vectors contain energy, this could be considered as a squared Euclidean
+  distance metric. Note that normalisation assumes the values are all
+  non-negative.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">f1 one of the vectors involved in the distance calculation</span> <span class="tagContents">f2 one of the vectors involved in the distance calculation</span> </p>
+<p class="tag tag_return"><span class="tagName">Returns:</span> <span class="tagContents">the distance, scaled and truncated to an integer</span> </p>
+</div>
+
+
+   <h3><a name="closeStreams()" id="closeStreams()">closeStreams</a></h3>
+   <div class="memberName">public  void closeStreams()</div>
+   <div class="memberDescription"> Closes the input stream(s) associated with this object.</div>
+
+
+   <h3><a name="doMatch(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix)" id="doMatch(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.ScrollingMatrix)">doMatch</a></h3>
+   <div class="memberName">public static  void doMatch(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm1, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm2, <a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> s)</div>
+   <div class="memberDescription"> Tracks a performance by choosing a likely band for the optimal path.</div>
+
+
+   <h3><a name="evaluateMatch(at.ofai.music.match.PerformanceMatcher)" id="evaluateMatch(at.ofai.music.match.PerformanceMatcher)">evaluateMatch</a></h3>
+   <div class="memberName">public  LinkedList&lt;<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a>.<a href="PerformanceMatcher.Onset.html" class="classRef">Onset</a>&gt; evaluateMatch(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm)</div>
+   <div class="memberDescription"> Matches two match files, creating a composite list of corresponding
+  onset times, consisting of the mean onset times of the notes in each
+  notated score position. This is the basis for evaluating the alignment
+  of the two performances. The asynchrony of notationally simultaneous
+  notes limits the accuracy achievable by the PerformanceMatcher.</div>
+
+
+   <h3><a name="getFrame()" id="getFrame()">getFrame</a></h3>
+   <div class="memberName">public  boolean getFrame()</div>
+   <div class="memberDescription"> Reads a frame of input data, averages the channels to mono, scales
+  to a maximum possible absolute value of 1, and stores the audio data
+  in a circular input buffer. Assumes 16 bit PCM, any number of channels.<p class="tag tag_return"><span class="tagName">Returns:</span> <span class="tagContents">true if a frame (or part of a frame, if it is the final frame)
+  is read. If a complete frame cannot be read, the InputStream is set
+  to null.</span> </p>
+</div>
+
+
+   <h3><a name="getValue(int,int,boolean)" id="getValue(int,int,boolean)">getValue</a></h3>
+   <div class="memberName">protected  int getValue(int i, int j, boolean firstAttempt)</div>
+   <div class="memberDescription"> Retrieves values from the minimum cost matrix.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">i the frame number of this PerformanceMatcher</span> <span class="tagContents">j the frame number of the other PerformanceMatcher</span> </p>
+<p class="tag tag_return"><span class="tagName">Returns:</span> <span class="tagContents">the cost of the minimum cost path to this location</span> </p>
+</div>
+
+
+   <h3><a name="init()" id="init()">init</a></h3>
+   <div class="memberName">protected  void init()</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="main(<unknown>.String[])" id="main(<unknown>.String[])">main</a></h3>
+   <div class="memberName">public static  void main(String[] args)</div>
+   <div class="memberDescription"> Entry point for command line version of performance matcher.<p class="tag tag_see"><span class="tagName">See Also:</span> <span class="tagContents"><code><a href="PerformanceMatcher.html">(PerformanceMatcher,PerformanceMatcher,String[])
+  processArgs(PerformanceMatcher,PerformanceMatcher,String[]) for
+  documentation of command-line arguments.</a></code></code></span> </p>
+</div>
+
+
+   <h3><a name="makeChromaFrequencyMap(int,float,double)" id="makeChromaFrequencyMap(int,float,double)">makeChromaFrequencyMap</a></h3>
+   <div class="memberName">protected  void makeChromaFrequencyMap(int fftSize, float sR, double refFreq)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="makeFreqMap(int,float,double)" id="makeFreqMap(int,float,double)">makeFreqMap</a></h3>
+   <div class="memberName">protected  void makeFreqMap(int fftSize, float sampleRate, double refFreq)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="makeStandardFrequencyMap(int,float,double)" id="makeStandardFrequencyMap(int,float,double)">makeStandardFrequencyMap</a></h3>
+   <div class="memberName">protected  void makeStandardFrequencyMap(int fftSize, float sampleRate, double refFreq)</div>
+   <div class="memberDescription"> Creates a map of FFT frequency bins to comparison bins.
+  Where the spacing of FFT bins is less than 0.5 semitones, the mapping is
+  one to one. Where the spacing is greater than 0.5 semitones, the FFT
+  energy is mapped into semitone-wide bins. No scaling is performed; that
+  is the energy is summed into the comparison bins. See also
+  processFrame()</div>
+
+
+   <h3><a name="print()" id="print()">print</a></h3>
+   <div class="memberName">public  void print()</div>
+   <div class="memberDescription"> For debugging, outputs information about the PerformanceMatcher to
+  standard error.</div>
+
+
+   <h3><a name="processArgs(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,<unknown>.String[])" id="processArgs(at.ofai.music.match.PerformanceMatcher,at.ofai.music.match.PerformanceMatcher,<unknown>.String[])">processArgs</a></h3>
+   <div class="memberName">public static  int processArgs(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm1, <a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> pm2, String[] args)</div>
+   <div class="memberDescription"> Processes command line arguments.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">pm1 The first PerformanceMatcher</span> <span class="tagContents">pm2 The second PerformanceMatcher</span> <span class="tagContents">args Command line arguments<br>
+  Usage: java PerformanceMatcher [optional-args] inputFile1 inputFile2<br>
+  Optional args are:<ul>
+  <li><b>-h hopTime</b> spacing of audio frames (in seconds, default 0.01)
+  <li><b>-f frameTime</b> size of FFT (in seconds, default 0.01161)
+  <li><b>-x maxFrames</b> stop after maxFrames frames have been processed
+  <li><b>-m1 matchFile1 offset1</b> matchFile + start time for inputFile1
+  <li><b>-m2 matchFile2 offset2</b> matchFile + start time for inputFile2
+  <li><b>-w1 wormFile1</b> wormFile for inputFile1
+  <li><b>-w2 wormFile2</b> wormFile for inputFile2
+  <li><b>-[nN]<i>k</i></b> Various options for normalisation, where
+    <b>n</b> switches on, <b>N</b> switches off each option.
+    <b><i>k</i></b> can have the following values:<ul>
+    <li>1: normalise each FFT frame (sum of energy = 1) before comparison (default=true)
+    <li>2: normalise distance metric by sum of energies of both frames (default=false)
+    <li>3: normalise each FFT frame by the medium-term average energy (default=false)
+    <li>4: normalise distance metric by thresholded log of sum of frames (default=true)
+    <li>5: set distance to zero for non-annotated positions in either file (default=false)
+    </ul>
+  <li><b>-d</b> use half-wave rectified spectral difference (default)
+  <li><b>-D</b> do not use half-wave rectified spectral difference
+  <li><b>-s scale</b> set scaling factor for distance metric
+  <li><b>-b</b> set batch mode
+  <li><b>-B</b> unset batch mode (default)
+  <li><b>-smooth length</b> set smoothing window size to length
+  <li><b>-a</b> audio out (file 1)
+  <li><b>-A</b> audio out (file 2)
+  <li><b>-l</b> live input (file 1)
+  <li><b>-L</b> live input (file 2)
+  <li><b>-w</b> live worm output (file 1)
+  <li><b>-W</b> live worm output (file 2)
+  <li><b>-z fileName</b> worm output (map file 1 to 2)
+  <li><b>-Z fileName</b> worm output (map file 2 to 1)
+  <li><b>-ob fileName</b> output backward match path
+  <li><b>-of fileName</b> output forward match path
+  <li><b>-os fileName</b> output smoothed match path
+  <li><b>-rf1 value</b> set A4 reference frequency (default 440) for pm1
+  <li><b>-rf2 value</b> set A4 reference frequency for pm2
+  </ul></span> </p>
+</div>
+
+
+   <h3><a name="processFrame()" id="processFrame()">processFrame</a></h3>
+   <div class="memberName">protected  void processFrame()</div>
+   <div class="memberDescription"> Processes a frame of audio data by first computing the STFT with a
+  Hamming window, then scaling the frequency axis with an arbitrary
+  mapping, then (optionally) computing the half-wave
+  rectified spectral difference from the previous frame, then (optionally)
+  normalising to a sum of 1, then calculating the distance to all frames
+  stored in the otherMatcher and storing them in the distance matrix, and
+  finally updating the optimal path matrix using the dynamic time warping
+  algorithm.</div>
+
+
+   <h3><a name="setInputFile(at.ofai.music.match.AudioFile)" id="setInputFile(at.ofai.music.match.AudioFile)">setInputFile</a></h3>
+   <div class="memberName">public  void setInputFile(<a href="AudioFile.html" class="classRef">AudioFile</a> f)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setInputFile(<unknown>.String)" id="setInputFile(<unknown>.String)">setInputFile</a></h3>
+   <div class="memberName">public  void setInputFile(String fileName)</div>
+   <div class="memberDescription"> Sets up the streams and buffers for audio file input.
+  If any Exception is thrown within this method, it is caught, and any
+  opened streams are closed, and <code>pcmInputStream</code> is set to
+  <code>null</code>, indicating that the method did not complete
+  successfully.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">fileName The path name of the input audio file.</span> </p>
+</div>
+
+
+   <h3><a name="setLabelFile(<unknown>.String)" id="setLabelFile(<unknown>.String)">setLabelFile</a></h3>
+   <div class="memberName">public  void setLabelFile(String fileName)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setLiveInput()" id="setLiveInput()">setLiveInput</a></h3>
+   <div class="memberName">public  void setLiveInput()</div>
+   <div class="memberDescription"> Sets up the streams and buffers for live audio input (CD quality).
+  If any Exception is thrown within this method, it is caught, and any
+  opened streams are closed, and <code>pcmInputStream</code> is set to
+  <code>null</code>, indicating that the method did not complete
+  successfully.</div>
+
+
+   <h3><a name="setMatchFile(<unknown>.String,double,boolean)" id="setMatchFile(<unknown>.String,double,boolean)">setMatchFile</a></h3>
+   <div class="memberName">public  void setMatchFile(String fileName, double tStart, boolean isWorm)</div>
+   <div class="memberDescription"> Sets the match file for automatic evaluation of the PerformanceMatcher.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">fileName The path name of the match file</span> <span class="tagContents">tStart The offset of the audio recording, that is, the time of
+  the first note onset relative to the beginning of the audio file. This
+  is required for precise synchronisation of the audio and match files.</span> <span class="tagContents">isWorm Indicates whether the match file is in Worm file format.</span> </p>
+</div>
+
+
+   <h3><a name="setMatchFile(<unknown>.String,double)" id="setMatchFile(<unknown>.String,double)">setMatchFile</a></h3>
+   <div class="memberName">public  void setMatchFile(String fileName, double tStart)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="setOtherMatcher(at.ofai.music.match.PerformanceMatcher)" id="setOtherMatcher(at.ofai.music.match.PerformanceMatcher)">setOtherMatcher</a></h3>
+   <div class="memberName">public  void setOtherMatcher(<a href="PerformanceMatcher.html" class="classRef">PerformanceMatcher</a> p)</div>
+   <div class="memberDescription"> Adds a link to the PerformanceMatcher object representing the
+  performance which is going to be matched to this one.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">p the PerformanceMatcher representing the other performance</span> </p>
+</div>
+
+
+   <h3><a name="setProgressCallback(at.ofai.music.match.GUI.FileNameSelection)" id="setProgressCallback(at.ofai.music.match.GUI.FileNameSelection)">setProgressCallback</a></h3>
+   <div class="memberName">public  void setProgressCallback(<a href="GUI.html" class="classRef">GUI</a>.<a href="GUI.FileNameSelection.html" class="classRef">FileNameSelection</a> c)</div>
+   <div class="memberDescription"> Adds a link to the GUI component which shows the progress of matching.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">c the PerformanceMatcher representing the other performance</span> </p>
+</div>
+
+
+   <h3><a name="setValue(int,int,int,int,int)" id="setValue(int,int,int,int,int)">setValue</a></h3>
+   <div class="memberName">protected  void setValue(int i, int j, int dir, int value, int dMN)</div>
+   <div class="memberDescription"> Stores entries in the distance matrix and the optimal path matrix.<p class="tag tag_param"><span class="tagName">Parameters:</span> <span class="tagContents">i the frame number of this PerformanceMatcher</span> <span class="tagContents">j the frame number of the other PerformanceMatcher</span> <span class="tagContents">dir the direction from which this position is reached with
+  minimum cost</span> <span class="tagContents">value the cost of the minimum path except the current step</span> <span class="tagContents">dMN the distance cost between the two frames</span> </p>
+</div>
+
+
+   <h3><a name="toString()" id="toString()">toString</a></h3>
+   <div class="memberName">public  String toString()</div>
+   <div class="memberDescription"> Gives some basic `header' information about the PerformanceMatcher.</div>
+
+
+   <h3><a name="writeLabelFile(at.ofai.music.match.ScrollingMatrix)" id="writeLabelFile(at.ofai.music.match.ScrollingMatrix)">writeLabelFile</a></h3>
+   <div class="memberName">public  void writeLabelFile(<a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> sm)</div>
+   <div class="memberDescription"></div>
+
+
+   <h3><a name="writeMidiFile(at.ofai.music.match.ScrollingMatrix)" id="writeMidiFile(at.ofai.music.match.ScrollingMatrix)">writeMidiFile</a></h3>
+   <div class="memberName">public  void writeMidiFile(<a href="ScrollingMatrix.html" class="classRef">ScrollingMatrix</a> sm)</div>
+   <div class="memberDescription"></div>
+
+   
+   <div class="navbar">
+    <p class="nav navtop">
+      <span class="over"><a href="../../../../overview-summary.html">Overview</a></span>
+      <span class="package"><a href="package-summary.html">Package</a></span>
+      <span class="class selected">Class</span>
+      <span class="use"><a href="class-use/PerformanceMatcher.html">Use</a></span>
+      <span class="tree"><a href="package-tree.html">Tree</a></span>
+      <span class="deprecated"><a href="../../../../deprecated-list.html">Deprecated</a></span>
+      <span class="index"><a href="../../../../index-all.html">Index</a></span>
+      <span class="help"><a href="../../../../help-doc.html">Help</a></span>
+    </p>
+    <p class="nav navmid">
+      <span class="prevnext">
+       <span class="prev">Prev Class</span>
+       <span class="next">Next Class</span>
+      </span>
+      <span class="framesel">
+       <span class="frames"><a href="../../../../index.html" target="_top">Frames</a></span>
+       <span class="noframes"><a href="PerformanceMatcher.html" target="_top">NoFrames</a></span>
+      </span>
+      <span class="allclasses"><a href="../../../../allclasses-noframe.html">All Classes</a></span>
+   </p>
+   <p class="nav navbot">
+      <span class="summary">Summary:
+       <span class="nested"><a href="#nested_class_summary">Nested</a></span>
+       <span class="field"><a href="#field_summary">Field</a></span>
+       <span class="constr"><a href="#constructor_summary">Constr</a></span>
+       <span class="method"><a href="#method_summary">Method</a></span>
+      </span>
+      <span class="detail">Detail:
+       <span class="field"><a href="#field_detail">Field</a></span>
+       <span class="constr"><a href="#constructor_detail">Constr</a></span>
+       <span class="method"><a href="#method_detail">Method</a></span>
+      </span>
+   </p>
+    <div class="navtitle">
+     
+    </div>
+    <p class="clear"><!--empty--></p>
+   </div>
+   <div class="bottom"></div>
+   </body>
+</html>
