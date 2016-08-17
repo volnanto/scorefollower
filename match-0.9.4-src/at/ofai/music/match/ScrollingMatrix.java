@@ -47,6 +47,8 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 	protected LinkedList<PerformanceMatcher.Onset> correct;
 	protected ListIterator<PerformanceMatcher.Onset> listIterator;
 	
+	protected WebsocketClientEndpoint clientEndPoint; //WebSocket
+	
 	protected double hop1, hop2;
 	protected int x0prev, y0prev;
 	protected int showHorizontal, showVertical;
@@ -67,8 +69,6 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 //	protected WormHandler wormHandler;
 	protected boolean liveWorm;
 	protected int paintCount;
-
-
 	
 	static final int white = 0x00FFFFFF;
 	static final int red = 0x00FF0000;
@@ -97,6 +97,7 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 	 *  the display
 	 *  @param pm2 the PerformanceMatcher corresponding to the horizontal axis
 	 *  of the display
+	 * @throws URISyntaxException 
 	 */
 //	public static ScrollingMatrix showInFrame(PerformanceMatcher pm1,
 //											   PerformanceMatcher pm2) {
@@ -106,7 +107,7 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 //		return sm;
 //	} // showInFrame()
 
-	public ScrollingMatrix(PerformanceMatcher pm1, PerformanceMatcher pm2) {
+	public ScrollingMatrix(PerformanceMatcher pm1, PerformanceMatcher pm2) throws URISyntaxException {
 		this(pm1, pm2, DEFAULT_HEIGHT, DEFAULT_WIDTH, pm1.evaluateMatch(pm2));
 	} // constructor
 
@@ -122,9 +123,10 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 	 *  @param sz2 the horizontal size of the display window
 	 *  @param l the list of paired onset times from the match files of the two
 	 *  performances
+	 * @throws URISyntaxException 
 	 */
 	public ScrollingMatrix(PerformanceMatcher pm1, PerformanceMatcher pm2,
-				int sz1, int sz2, LinkedList<PerformanceMatcher.Onset> l) {
+				int sz1, int sz2, LinkedList<PerformanceMatcher.Onset> l) throws URISyntaxException {
 		
 		parent = null;
 		this.pm1 = pm1;
@@ -137,6 +139,9 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 		//	wormHandler.setScrollingMatrix(this);
 		xSize = sz2;
 		ySize = sz1;
+		
+		clientEndPoint = new WebsocketClientEndpoint(new URI("ws://localhost:8080/WebApp/echo"));
+		//WebSocket
 		
 		finder = new Finder(pm1, pm2);
 		clipRect = new Rectangle(0, 0, xSize, ySize);
@@ -406,11 +411,12 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 		DataStorage x = new DataStorage();
 		HashMap <Integer, Integer> map  = x.getHashmap();
 		
+		clientEndPoint.sendMessage(map.get((int)tmpx/50));
 	
-	    final WebsocketClientEndpoint clientEndPoint = new WebsocketClientEndpoint(new URI("ws://localhost:8080/WebApp/echo"));
+	    //final WebsocketClientEndpoint clientEndPoint = new WebsocketClientEndpoint(new URI("ws://localhost:8080/WebApp/echo"));
 	  
 	    
-        clientEndPoint.sendMessage(map.get((int)tmpx/50));
+       // clientEndPoint.sendMessage(map.get((int)tmpx/50));
         
  		//System.out.println((int)tmpx);
  	
@@ -740,7 +746,7 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 		}
 	} // paintPathBackwards()
 */
-
+	
 	/** Overrides Component.update() to stop flashing due to clearing bkgnd.
 	 *  Only called for non-Swing Components, in response to a repaint().
 	 */
@@ -1112,3 +1118,4 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 	} // processKey()
 
 } // class ScrollingMatrix
+
