@@ -75,6 +75,7 @@ public class EchoServer {
               .add("messageType", "setMusicScorePosition")
               .add("position", map.get(pos))
               .add("image", url.get(pos))
+              .add("time",System.currentTimeMillis()/1000L)
               .build();
           sess.getBasicRemote().sendObject(obj);
           }
