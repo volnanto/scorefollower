@@ -43,9 +43,9 @@ public class EchoServer {
         System.out.println(session.getId() + " has opened a connection"); 
         try {
             session.getBasicRemote().sendText("Connection Established");
-           // session.getBasicRemote().sendText("50");
-            //session.getBasicRemote().sendObject(System.currentTimeMillis());
-//            session.getBasicRemote().sendObject(obj);
+
+            session.getBasicRemote().sendObject(System.currentTimeMillis()/1000L); //Connection Starting Time
+
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -75,7 +75,7 @@ public class EchoServer {
               .add("messageType", "setMusicScorePosition")
               .add("position", map.get(pos))
               .add("image", url.get(pos))
-              .add("time",System.currentTimeMillis()/1000L)
+              .add("time",System.currentTimeMillis()/1000L) //Unix epoce timestamp
               .build();
           sess.getBasicRemote().sendObject(obj);
           }
