@@ -1,4 +1,4 @@
-   1   Sospiri_1.png
+  1   Sospiri_1.png
    2   Sospiri_1.png
    3   Sospiri_1.png
    4   Sospiri_1.png
@@ -10,30 +10,32 @@
    9   Sospiri_2.png
    10  Sospiri_2.png
    11  Sospiri_2.png
-   12  Sospiri_2.png
-
+   
+   12  Sospiri_3.png
    13  Sospiri_3.png
    14  Sospiri_3.png
    15  Sospiri_3.png
-   16  Sospiri_3.png
-   17  Sospiri_3.png
 
+   16  Sospiri_4.png
+   17  Sospiri_4.png
    18  Sospiri_4.png
    19  Sospiri_4.png
-   20  Sospiri_4.png
-   21  Sospiri_4.png
-   22  Sospiri_4.png
 
+   20  Sospiri_5.png
+   21  Sospiri_5.png
+   22  Sospiri_5.png
    23  Sospiri_5.png
-   24  Sospiri_5.png
-   25  Sospiri_5.png
-   26  Sospiri_5.png
-   27  Sospiri_5.png
 
-   28  Sospiri_6.png
-   29  Sospiri_6.png
-   30  Sospiri_6.png
-   31  Sospiri_6.png
-   32  Sospiri_6.png
-   33  Sospiri_6.png
-   34  Sospiri_6.png
+   24  Sospiri_6.png
+   25  Sospiri_6.png
+   26  Sospiri_6.png
+
+   27  Sospiri_7.png
+   28  Sospiri_7.png
+   29  Sospiri_7.png
+   30  Sospiri_7.png
+   31  Sospiri_7.png
+
+   32  Sospiri_8.png
+   33  Sospiri_8.png
+   34  Sospiri_8.png
