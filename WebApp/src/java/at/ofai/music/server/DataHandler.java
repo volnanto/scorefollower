@@ -20,7 +20,7 @@ public class DataHandler {
 
        int bar = sc.nextInt();
        int pos = sc.nextInt();
-       String per = pos*100/1662 + "%";
+       String per = pos*100/2481 + "%";
   
       map.put(bar, per);
 	}
