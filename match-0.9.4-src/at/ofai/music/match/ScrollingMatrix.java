@@ -408,10 +408,10 @@ public class ScrollingMatrix extends Canvas implements KeyListener,
 		int tmpx = finder.bestCol;
 		int tmpy = finder.bestRow;
 		
-		DataStorage x = new DataStorage();
-		HashMap <Integer, Integer> map  = x.getHashmap();
+		//DataStorage x = new DataStorage();
+		//HashMap <Integer, Integer> map  = x.getHashmap();
 		
-		clientEndPoint.sendMessage(map.get((int)tmpx/50));
+		clientEndPoint.sendMessage((int)tmpx/50);
 	
 	    //final WebsocketClientEndpoint clientEndPoint = new WebsocketClientEndpoint(new URI("ws://localhost:8080/WebApp/echo"));
 	  
