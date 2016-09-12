@@ -65,17 +65,22 @@ public class EchoServer {
         HashMap <Integer, String> map  = x.getHashmap();
         imageURL y = new imageURL();
         HashMap <Integer, String> url  = y.getURLmap();
+        DataStorage z = new DataStorage();
+        HashMap <Integer, Integer> refMap  = z.getHashmap();
         
-        int pos = Integer.parseInt(message);
+        
+        int refTime = Integer.parseInt(message);
+        int bar = refMap.get(refTime);
         allSessions = session.getOpenSessions();
       
           for (Session sess: allSessions){
               JsonObject obj = Json.createObjectBuilder()
-              .add("bar", message)
+              .add("refTime", refTime)
+              .add("bar", bar)
               .add("messageType", "setMusicScorePosition")
-              .add("position", map.get(pos))
-              .add("image", url.get(pos))
-              .add("time",System.currentTimeMillis()/1000L) //Unix epoce timestamp
+              .add("position", map.get(bar))
+              .add("image", url.get(bar))
+              .add("time", System.currentTimeMillis()/1000L)
               .build();
           sess.getBasicRemote().sendObject(obj);
           }
